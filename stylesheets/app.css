@@ -4282,7 +4282,7 @@ h1, h2, h3, h4, h5, h6 {
 .page {
   padding: 50px;
   padding-top: 95px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 /* line 80, ../sass/app.scss */

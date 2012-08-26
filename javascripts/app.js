@@ -43,7 +43,7 @@
                 pageHeight = $(window).height();
 
             if (target !== '#') {
-                $('body').animate({
+                $('body,html').animate({
                     scrollTop: index * pageHeight
                 });
             }
