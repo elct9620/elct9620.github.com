@@ -1,0 +1,59 @@
+/**
+ * FROST Responsive
+ */
+@media only screen and (max-width: 767px) {
+  /* line 13, ../sass/responsive.scss */
+  #header nav ul li {
+    border: none;
+    display: none;
+  }
+  /* line 17, ../sass/responsive.scss */
+  #header nav ul li .nav-open {
+    float: right;
+    margin-top: 17px;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 8px;
+    border-color: white transparent transparent transparent;
+  }
+
+  /* line 28, ../sass/responsive.scss */
+  .page h1 {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+
+  /* line 35, ../sass/responsive.scss */
+  #home .horizontal-bar header {
+    text-align: center;
+  }
+  /* line 39, ../sass/responsive.scss */
+  #home .horizontal-bar nav {
+    border: none;
+  }
+  /* line 42, ../sass/responsive.scss */
+  #home .horizontal-bar nav ul.side-nav {
+    text-align: center;
+  }
+  /* line 45, ../sass/responsive.scss */
+  #home .horizontal-bar nav ul.side-nav li {
+    display: inline;
+    padding: 0 5px;
+  }
+  /* line 49, ../sass/responsive.scss */
+  #home .horizontal-bar nav ul.side-nav li:last-child {
+    border: none;
+  }
+  /* line 53, ../sass/responsive.scss */
+  #home .horizontal-bar nav ul.side-nav li a {
+    display: inline;
+  }
+
+  /* line 63, ../sass/responsive.scss */
+  #skills .skill-ball {
+    width: 7px;
+    height: 7px;
+  }
+}

@@ -1,0 +1,70 @@
+/**
+ * FROST Responsive
+ */
+
+@import "foundation/mixins/css-triangle";
+@import "foundation/mixins/font-size";
+
+@media only screen and (max-width: 767px) {
+
+  #header {
+    nav {
+      ul {
+        li {
+          border: none;
+          display: none;
+
+          .nav-open {
+            float: right;
+            margin-top: 17px;
+            @include cssTriangle(8px, #FFF, top);
+          }
+        }
+      }
+    }
+  }
+
+  .page {
+    h1 {
+      @include font-size(18);
+    }
+  }
+
+  #home {
+    .horizontal-bar {
+      header {
+        text-align: center;
+      }
+
+      nav {
+        border: none;
+
+        ul.side-nav {
+          text-align: center;
+
+          li {
+            display: inline;
+            padding: 0 5px;
+
+            &:last-child {
+              border: none;
+            }
+
+            a {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #skills {
+    .skill-ball {
+      width: 7px;
+      height: 7px;
+    }
+  }
+
+}
+

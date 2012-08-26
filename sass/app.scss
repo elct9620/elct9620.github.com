@@ -1,0 +1,220 @@
+// You custom settings file to override Foundation defaults
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+// CSS3
+@import "compass/css3";
+
+/**
+ * FROST Stylesheet
+ *
+ * @author 蒼時弦也
+ * @version 1.0.0
+ */
+
+html, body {
+  height: 100%;
+}
+
+/**
+ * Glbal
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+}
+
+#header {
+  background: rgba(0, 0, 0, .8);
+  position: absolute;
+  top: 0;
+  z-index: 999;
+
+  h1 {
+    color: #FFF;
+    font-weight: normal;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: .25em;
+    @include font-size(18);
+
+    a {
+      color: #FFF;
+    }
+  }
+
+  nav {
+    ul {
+      font-family: "Open Sans", sans-serif;
+      list-style: none;
+      margin: 0;
+      text-align: right;
+
+      li {
+        border-right: 1px solid adjust-lightness(black, 30);
+        display: inline-block;
+        height: 45px;
+        line-height: 45px;
+        padding: 0 1em;
+
+        &:last-child {
+          border: none;
+        }
+
+        a {
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
+
+.page {
+  padding: 50px;
+  padding-top: 95px;
+  overflow: scroll;
+}
+
+.container {
+  background: #FFF;
+  @include single-box-shadow(#CCC, 1px, 1px, 1px);
+  @include border-radius(5px);
+}
+
+/**
+ * Page 1
+ *
+ * Landing Page
+ */
+
+#home {
+
+  .horizontal-bar {
+    background: #3FA9F5;
+    position: absolute;
+    top: 50%;
+
+    header {
+      text-align: right;
+    }
+
+    nav {
+      border-left: 1px solid white;
+      font-family: "Open Sans", sans-serif;
+
+      a {
+        color: #FFF;
+      }
+    }
+  }
+
+}
+
+/**
+ * Page 2
+ *
+ * About Me
+ */
+
+#about {
+  background: image-url('about_bg.png');
+
+  .profile {
+    text-align: right;
+  }
+
+  dd {
+    margin-bottom: .5em;
+  }
+
+  .picture {
+    img {
+      background: #FFF;
+      border: 1px solid #EEE;
+      padding: 5px;
+      @include single-box-shadow(#EFEFEF, 0, 0, 3px);
+    }
+  }
+}
+
+/**
+ * Page 3
+ *
+ * Skills
+ */
+
+#skills {
+  background: image-url('skills_bg.png');
+
+  h1 {
+    float: left;
+  }
+
+  dl {
+    line-height: 2em;
+    padding-bottom: 13px;
+    @include innerRow();
+  }
+
+  dd {
+    @include column(6);
+  }
+
+  dt {
+    @include column(6);
+  }
+
+  .skill-ball {
+    background: #7AC943;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    text-indent: -999999px;
+    margin: 0 2.5px;
+    @include border-radius(50%);
+  }
+
+  .disable {
+    background: #EFEFEF;
+  }
+
+  .container {
+    @include single-box-shadow(#999, 1px, 1px, 1px);
+  }
+}
+
+/**
+ * Page 4
+ *
+ * Portfolio
+ */
+
+#portfolio {
+  background: image-url('about_bg.png');
+}
+
+/**
+ * Page 5
+ *
+ * Contact
+ */
+
+#contact {
+  background: image-url('about_bg.png');
+  text-align: center;
+
+  h1 {
+    float: left;
+  }
+
+  img {
+    border: none;
+    margin: 0 4.5px 13px;
+  }
+
+  .has-tip {
+    border: none;
+  }
+}
