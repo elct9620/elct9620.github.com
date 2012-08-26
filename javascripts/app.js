@@ -57,7 +57,7 @@
         });
 
         $('#header .main-nav a').click(function () {
-            if (!$(this).hasClass('nav-open')) {
+            if (!$(this).hasClass('nav-open') && $(window).width() < 768) {
                 toggleNav();
             }
         });
