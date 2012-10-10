@@ -1,0 +1,732 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+/* line 9, ../sass/main.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+/* line 13, ../sass/main.scss */
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/* line 18, ../sass/main.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 23, ../sass/main.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 28, ../sass/main.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 37, ../sass/main.scss */
+img {
+  vertical-align: middle;
+}
+
+/* line 41, ../sass/main.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 47, ../sass/main.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 51, ../sass/main.scss */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/**
+ * Mixins
+ */
+/**
+ * Clear Fix
+ */
+/**
+ * Grid Count
+ */
+/**
+ * Font
+ */
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot");
+  src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.svg#icomoon") format("svg"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+/* line 13, ../sass/_font.scss */
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/* line 22, ../sass/_font.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'icomoon';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 29, ../sass/_font.scss */
+.icon-github:before {
+  content: "\26";
+}
+
+/* line 32, ../sass/_font.scss */
+.icon-facebook:before {
+  content: "\27";
+}
+
+/* line 35, ../sass/_font.scss */
+.icon-twitter:before {
+  content: "\22";
+}
+
+/* line 38, ../sass/_font.scss */
+.icon-google-plus:before {
+  content: "\23";
+}
+
+/* line 41, ../sass/_font.scss */
+.icon-comments:before {
+  content: "\21";
+}
+
+/**
+ * Basic
+ */
+/* line 80, ../sass/main.scss */
+html {
+  font-size: 12px;
+}
+
+/* line 84, ../sass/main.scss */
+body {
+  background: #DEDDE2;
+  font-family: "微軟正黑體", "Helvetica Neue", "Helvetica", Helvetica, "Apple LiGothic", Arial, sans-serif;
+  color: #2B2320;
+}
+
+/* line 91, ../sass/main.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", "微軟正黑體", "Apple LiGothic", sans-serif;
+  font-weight: normal;
+}
+
+/**
+ * Loading Bar
+ */
+/* line 100, ../sass/main.scss */
+#loadingBar {
+  background: #FFF;
+  position: absolute;
+  top: 50%;
+  width: 0%;
+  height: 1px;
+  z-index: -999;
+}
+/* line 111, ../sass/main.scss */
+#loadingBar .innerBG {
+  background: url('../images/header_bg.jpg?1349832662') center no-repeat;
+  display: none;
+  height: 100%;
+}
+
+/**
+ * Responsive Grid System
+ */
+/* line 26, ../sass/_mixin.scss */
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+/* line 9, ../sass/_mixin.scss */
+.row:before, .row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 16, ../sass/_mixin.scss */
+.row:after {
+  clear: both;
+}
+
+/* line 32, ../sass/_mixin.scss */
+[class*="span"] {
+  margin-left: 20px;
+  float: left;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span1 {
+  margin-top: 1em;
+  width: 65px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span2 {
+  margin-top: 1em;
+  width: 150px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span3 {
+  margin-top: 1em;
+  width: 235px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span4 {
+  margin-top: 1em;
+  width: 320px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span5 {
+  margin-top: 1em;
+  width: 405px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span6 {
+  margin-top: 1em;
+  width: 490px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span7 {
+  margin-top: 1em;
+  width: 575px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span8 {
+  margin-top: 1em;
+  width: 660px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span9 {
+  margin-top: 1em;
+  width: 745px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span10 {
+  margin-top: 1em;
+  width: 830px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span11 {
+  margin-top: 1em;
+  width: 915px;
+}
+
+/* line 38, ../sass/_mixin.scss */
+.span12 {
+  margin-top: 1em;
+  width: 1000px;
+}
+
+/**
+ * Header & Footer
+ */
+/* line 130, ../sass/main.scss */
+header[role="header"] {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+/* line 134, ../sass/main.scss */
+header[role="header"] h1 {
+  font-size: 36px;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 54px;
+  line-height: 4.5rem;
+  margin: 18px auto;
+  margin: 1.5rem auto;
+}
+
+/* line 146, ../sass/main.scss */
+footer[role="footer"] {
+  background: #2b2320;
+  text-align: right;
+  color: #FFF;
+  padding: 4em 0;
+  margin-top: 2em;
+}
+/* line 155, ../sass/main.scss */
+footer[role="footer"] .copyright {
+  width: 1000px;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  letter-spacing: .15em;
+}
+
+/**
+ * Back to Top
+ */
+/* line 170, ../sass/main.scss */
+#backTop {
+  display: none;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 999;
+}
+/* line 179, ../sass/main.scss */
+#backTop a {
+  background: rgba(43, 35, 32, 0.8);
+  font-family: "icomoon";
+  font-size: 24px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #FFF;
+  padding: .5em;
+  border: 1px solid rgba(222, 221, 226, 0.8);
+  border-radius: 5px;
+}
+/* line 193, ../sass/main.scss */
+#backTop a:hover {
+  background: #2B2320;
+}
+
+/**
+ * Navigation
+ */
+/* line 203, ../sass/main.scss */
+nav[role="mainMenu"] {
+  background: rgba(0, 0, 0, 0.5);
+  font-weight: 300;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #FFF;
+  padding: 1em 0;
+}
+/* line 213, ../sass/main.scss */
+nav[role="mainMenu"] h2 {
+  font-size: 14px;
+  font-size: 12px;
+  font-size: 1rem;
+  font-weight: 300;
+  display: inline;
+}
+/* line 221, ../sass/main.scss */
+nav[role="mainMenu"] .split {
+  font-size: 9px;
+  font-size: .75rem;
+  font-weight: 300;
+  color: gray;
+  margin: 0 .5em;
+}
+/* line 230, ../sass/main.scss */
+nav[role="mainMenu"] ul {
+  display: inline;
+  padding: 0;
+}
+/* line 236, ../sass/main.scss */
+nav[role="mainMenu"] li {
+  display: inline;
+  margin-left: .5em;
+}
+/* line 241, ../sass/main.scss */
+nav[role="mainMenu"] li:first-child {
+  margin-left: 0;
+}
+/* line 246, ../sass/main.scss */
+nav[role="mainMenu"] a {
+  color: #BBB;
+  text-decoration: none;
+}
+/* line 250, ../sass/main.scss */
+nav[role="mainMenu"] a:hover {
+  color: #FFF;
+}
+
+/**
+ * Main Frame
+ */
+/* line 260, ../sass/main.scss */
+#mainFrame {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+}
+
+/* line 268, ../sass/main.scss */
+#wrapper {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/**
+ * Global Element
+ */
+/* line 281, ../sass/main.scss */
+.page {
+  margin-top: 24px;
+  margin-top: 2rem;
+}
+/* line 285, ../sass/main.scss */
+.page h2 {
+  text-transform: uppercase;
+}
+
+/**
+ * Home
+ */
+/* line 294, ../sass/main.scss */
+#home {
+  background: #2b2320;
+  width: 32em;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: -30px;
+  text-align: center;
+  position: relative;
+}
+/* line 307, ../sass/main.scss */
+#home h2 {
+  font-size: 24px;
+  font-size: 2rem;
+  line-height: 60px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #FFF;
+  display: inline;
+}
+/* line 317, ../sass/main.scss */
+#home h2 small {
+  color: #b29f98;
+  line-height: 60px;
+}
+
+/* line 324, ../sass/main.scss */
+#rbCover {
+  background: url('../images/right_bottom_cover.png?1349786890') no-repeat center center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+}
+
+/**
+ * Page About
+ */
+/* line 341, ../sass/main.scss */
+#about .avatar {
+  width: 200px;
+  margin: 0 auto;
+}
+/* line 346, ../sass/main.scss */
+#about .avatar img {
+  border-radius: 50%;
+}
+/* line 351, ../sass/main.scss */
+#about .split {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 100px;
+  font-weight: 300;
+  line-height: 200px;
+  text-align: center;
+  color: #b3b3b3;
+}
+/* line 362, ../sass/main.scss */
+#about p {
+  letter-spacing: .25em;
+  line-height: 1.5em;
+}
+
+/**
+ * Page Skills
+ */
+/* line 374, ../sass/main.scss */
+#skills h3 {
+  display: inline;
+  font-size: 12px;
+  font-size: 1rem;
+}
+/* line 381, ../sass/main.scss */
+#skills .skillBar {
+  display: inline-block;
+  width: 50%;
+  height: 14px;
+  background: #7AA3BF;
+  padding: 2px;
+  border-radius: 5px;
+  float: right;
+}
+/* line 395, ../sass/main.scss */
+#skills .skillBar .inner {
+  background: #B1C3D1;
+  border-radius: 3px;
+  height: 12px;
+  height: 100%;
+}
+/* line 405, ../sass/main.scss */
+#skills .split {
+  margin-right: 1.5em;
+  font-size: 9px;
+  font-size: .75rem;
+  color: #cccccc;
+}
+
+/**
+ * Portfolio
+ */
+/* line 419, ../sass/main.scss */
+#portfolio .picture {
+  width: 200px;
+  height: 125px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+/* line 427, ../sass/main.scss */
+#portfolio .picture img {
+  max-width: 250px;
+  height: auto;
+}
+/* line 433, ../sass/main.scss */
+#portfolio .meta {
+  text-align: center;
+  margin: .5em auto;
+}
+/* line 438, ../sass/main.scss */
+#portfolio .meta .split {
+  color: #cccccc;
+  margin: 0 .5em;
+}
+/* line 444, ../sass/main.scss */
+#portfolio .meta .name {
+  font-weight: bold;
+}
+
+/**
+ * Contact
+ */
+/* line 455, ../sass/main.scss */
+#contact h3 {
+  display: inline;
+  font-size: 12px;
+  font-size: 1rem;
+}
+/* line 461, ../sass/main.scss */
+#contact .split {
+  color: #cccccc;
+  margin-right: 1.5em;
+}
+/* line 466, ../sass/main.scss */
+#contact a {
+  color: #7AA3BF;
+  font-family: 'icomoon';
+  font-size: 14px;
+  font-size: 1.16666rem;
+  text-decoration: none;
+  float: right;
+}
+/* line 475, ../sass/main.scss */
+#contact a:hover {
+  color: #477BA0;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/* line 501, ../sass/main.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+/* line 508, ../sass/main.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+/* line 515, ../sass/main.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* line 520, ../sass/main.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 532, ../sass/main.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 541, ../sass/main.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 546, ../sass/main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 551, ../sass/main.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 555, ../sass/main.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  /* line 564, ../sass/main.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 572, ../sass/main.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 576, ../sass/main.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 580, ../sass/main.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 590, ../sass/main.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 595, ../sass/main.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 600, ../sass/main.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 605, ../sass/main.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 609, ../sass/main.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 619, ../sass/main.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 625, ../sass/main.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

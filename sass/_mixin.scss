@@ -1,0 +1,69 @@
+/**
+ * Clear Fix
+ */
+
+@mixin clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+
+    line-height: 0;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+/**
+ * Grid Count
+ */
+
+@mixin makeGrid($width, $column, $gutter) {
+  .row {
+    margin-left: $gutter * -1;
+
+    @include clearfix();
+  }
+
+  [class*="span"] {
+    margin-left: $gutter;
+    float: left;
+  }
+
+  @for $i from 1 through $column {
+    .span#{$i} {
+      margin-top: 1em;
+
+      width: $width * $i + ($gutter * ($i - 1));
+    }
+  }
+}
+
+@mixin makeMobileGrid($column, $gutter) {
+  [class*="mobile"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  [class*="span"] {
+    margin-left: 0;
+    padding-left: $gutter;
+  }
+
+  .mobileHide {
+    display: none;
+  }
+
+  $width: 96%/$column;
+
+  @for $i from 1 through $column {
+    .mobile#{$i} {
+      width: $width * $i;
+    }
+  }
+}
