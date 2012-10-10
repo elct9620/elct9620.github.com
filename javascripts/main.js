@@ -1,16 +1,21 @@
 (function() {
 
   $(document).ready(function() {
+    var headerBG;
     $("#mainFrame, #header").hide();
-    $("#loadingBar").animate({
-      width: "100%"
-    }, 1000, function() {
-      $(this).children(".innerBG").show();
-      return $(this).animate({
-        height: "50%",
-        top: 0
+    headerBG = $("<img/>");
+    headerBG.attr('src', 'images/header_bg.jpg');
+    headerBG.load(function() {
+      return $("#loadingBar").animate({
+        width: "100%"
       }, 1000, function() {
-        return $("#mainFrame, #header").fadeIn('slow');
+        $(this).children(".innerBG").show();
+        return $(this).animate({
+          height: "50%",
+          top: 0
+        }, 1000, function() {
+          return $("#mainFrame, #header").fadeIn('slow');
+        });
       });
     });
     $(".fancybox").fancybox();

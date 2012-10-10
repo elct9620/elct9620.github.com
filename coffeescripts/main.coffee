@@ -1,15 +1,19 @@
 # FROST // JavaScript
 
-
 $(document).ready ->
   $("#mainFrame, #header").hide(); # Hide Main Frame before loading
-  $("#loadingBar").animate {width: "100%"}, 1000, ->
-    $(this).children(".innerBG").show();
-    $(this).animate {
-      height: "50%",
-      top: 0
-    }, 1000, ->
-      $("#mainFrame, #header").fadeIn('slow');
+
+  headerBG = $("<img/>")
+  headerBG.attr('src', 'images/header_bg.jpg')
+
+  headerBG.load ->
+    $("#loadingBar").animate {width: "100%"}, 1000, ->
+      $(this).children(".innerBG").show();
+      $(this).animate {
+        height: "50%",
+        top: 0
+      }, 1000, ->
+        $("#mainFrame, #header").fadeIn('slow');
 
   $(".fancybox").fancybox();
 
