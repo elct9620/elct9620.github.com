@@ -177,6 +177,7 @@ footer[role="footer"] {
   z-index: 999;
 
   a {
+    background: #2B2320;
     background: rgba(43, 35, 32, .8);
 
     font-family: "icomoon";
@@ -187,6 +188,7 @@ footer[role="footer"] {
 
     padding: .5em;
 
+    border-color: #DEDDE2;
     border: 1px solid rgba(222, 221, 226, .8);
     border-radius: 5px;
 
@@ -201,6 +203,7 @@ footer[role="footer"] {
  */
 
 nav[role="mainMenu"] {
+  background: #000;
   background: rgba(0, 0, 0, .5);
 
   font-weight: 300;
@@ -292,7 +295,7 @@ nav[role="mainMenu"] {
  */
 
 #home {
-  background: rgba(43, 35, 32, 1);
+  background: #2B2320;
 
   width: 32em;
   height: 60px;
