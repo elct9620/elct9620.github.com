@@ -29,8 +29,28 @@
 
         <script src="javascripts/plugins.js"></script>
         <script src="javascripts/main.js"></script>
+
     </head>
     <body>
+      <noscript>
+        <style>
+          #loadingBar {
+            display: block;
+            width: 100%;
+            height: 50%;
+            top: 0;
+          }
+
+          #loadingBar .innerBG {
+            display: block;
+          }
+
+          header[role="header"], #mainFrame {
+            display: block;
+          }
+        </style>
+      </noscript>
+
         <!--[if lt IE 9]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->

@@ -128,6 +128,8 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 header[role="header"] {
+  display: none;
+
   font-family: "Open Sans", sans-serif;
   text-align: center;
 
@@ -261,6 +263,8 @@ nav[role="mainMenu"] {
  */
 
 #mainFrame {
+  display: none;
+
   width: 100%;
   margin: 0 auto;
 
