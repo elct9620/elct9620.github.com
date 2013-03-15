@@ -2,3 +2,7 @@
 .sass-cache/
 .coffeescript-cache/
 fire_app_log.txt
+stylesheets/
+javascripts/
+!javascripts/plugins.js
+!javascripts/vendor/
