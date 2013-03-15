@@ -197,12 +197,12 @@ a {
 }
 
 /* Typography */
-/* line 61, ../../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 61, ../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
   font-size: 75%;
 }
 
-/* line 64, ../../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 64, ../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 12px;
   line-height: 2em;
@@ -226,7 +226,7 @@ html {
   -moz-background-clip: content-box;
   background-clip: content-box;
 }
-/* line 38, ../../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .container:after {
   content: "";
   display: table;
@@ -495,7 +495,7 @@ html {
   color: white;
   background: #3498db;
 }
-/* line 248, ../../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.5/sass/susy/_grid.scss */
+/* line 248, ../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.5/sass/susy/_grid.scss */
 #contact article:nth-child(2n) {
   float: left;
   margin-right: 2.12766%;
