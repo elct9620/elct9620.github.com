@@ -1,0 +1,32 @@
+<section id="skills" class="page">
+  <header>
+    <h1 class="uppercase text-normal">Skills</h1>
+  </header>
+  <%
+    skills = [
+      {:name => "Photoshop", :progress => 40},
+      {:name => "Illustrator", :progress => 55},
+      {:name => "HTML", :progress => 70},
+      {:name => "CSS", :progress => 65},
+      {:name => "Javascript", :progress => 55},
+      {:name => "PHP", :progress => 50},
+      {:name => "Rails", :progress => 35},
+      {:name => "Painting", :progress => 10}
+    ]
+
+    skills.each do |skill|
+      color = ""
+      if skill[:progress] > 60
+        color = " dark"
+      elsif skill[:progress] < 30
+        color = " light"
+      end
+  %>
+  <div class="card round<%= color %>">
+    <article>
+      <header><h2><%= skill[:name] %></h2></header>
+      <div class="skill-bar round"><div class="skill-inner round" style="width: <%= skill[:progress] %>%;"></div></div>
+    </article>
+  </div>
+  <% end %>
+</section>

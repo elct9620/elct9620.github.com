@@ -1,0 +1,56 @@
+/** Skill Card */
+
+.card {
+  color: $secondary-color;
+  background: $base-color;
+
+  padding: 1em 0;
+  margin-top: 1em;
+
+  @include span-columns(3 omega);
+  @include push(0.25);
+
+  @include at-breakpoint($tablet) {
+    @include span-columns(4 omega);
+    @include push(0.2);
+  }
+
+  @include at-breakpoint($handheld) {
+    @include span-columns(6 omega);
+    @include push(0.1);
+  }
+
+  .skill-bar {
+    background: $secondary-color;
+
+    padding: 1px;
+    margin: 0 auto;
+
+    height: 1.5em;
+    width: 90%;
+  }
+
+  .skill-inner {
+    background: $base-color;
+
+    height: 100%;
+  }
+
+  &.light {
+    color: $dark-color;
+    background: $light-color;
+
+    .skill-inner {
+      background: $light-color;
+    }
+  }
+
+  &.dark {
+    background: $dark-color;
+
+    .skill-inner {
+      background: $dark-color;
+    }
+  }
+
+}
