@@ -1,43 +1,41 @@
 (function() {
 
   $(document).ready(function() {
-    var headerBG;
-    $("#mainFrame, #header").hide();
-    headerBG = $("<img/>");
-    headerBG.attr('src', 'images/header_bg.jpg');
-    headerBG.load(function() {
-      return $("#loadingBar").animate({
-        width: "100%"
-      }, 1000, function() {
-        $(this).children(".innerBG").show();
-        return $(this).animate({
-          height: "50%",
-          top: 0
-        }, 1000, function() {
-          return $("#mainFrame, #header").fadeIn('slow');
+    $(".fancybox").fancybox({
+      padding: 0,
+      closeClick: true
+    });
+    $("#portfolio").find(".filter").on("click", "a", function(e) {
+      var self, tag, targets, works;
+      e.preventDefault();
+      self = $(this);
+      tag = self.data('type');
+      if (_gaq !== "undefined" && _gaq) {
+        if (self.hasClass('active')) {
+          _gaq.push(['_trackEvent', 'Portfolio', 'Hide', tag]);
+        } else {
+          _gaq.push(['_trackEvent', 'Portfolio', 'Show', tag]);
+        }
+      }
+      self.toggleClass('active');
+      works = $("#portfolio .works article");
+      return targets = works.filter(".tag-" + tag).toggleClass('hide');
+    });
+    return $("#main-menu").on("click", "a", function(e) {
+      var self, target, type;
+      self = $(this);
+      type = self.data('type');
+      target = self.attr('href');
+      if (type === "page") {
+        e.preventDefault();
+        $('html, body').animate({
+          scrollTop: $(target).offset().top
         });
-      });
-    });
-    $(".fancybox").fancybox();
-    $("#mainMenu a").click(function(e) {
-      $("html, body").animate({
-        scrollTop: $($(this).attr("href")).offset().top
-      }, 'slow');
-      return e.preventDefault();
-    });
-    $("#backTop").click(function(e) {
-      return $("html, body").animate({
-        scrollTop: 0
-      }, 'slow');
-    });
-    return $(window).scroll(function(e) {
-      var pageHeight, scrollTop;
-      scrollTop = $(this).scrollTop();
-      pageHeight = $(window).height() / 2;
-      if (scrollTop > pageHeight) {
-        return $("#backTop").fadeIn();
-      } else {
-        return $("#backTop").fadeOut();
+      }
+      if (_gaq !== "undefined" && _gaq) {
+        if (type === "page") {
+          return _gaq.push(['_trackPageview', "/" + target]);
+        }
       }
     });
   });
