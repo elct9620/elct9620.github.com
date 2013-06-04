@@ -99,7 +99,7 @@
 .label, .label-dark, #portfolio .filter a:hover, #portfolio .filter a.active, .label-light {
   color: white;
   background: #3498db;
-  padding: 0.25em 0.5em;
+  padding: .25em .5em;
 }
 
 /* line 107, ../sass/_ui.scss */
@@ -189,9 +189,11 @@ body {
   font-family: "Open Sans", "微軟正黑體", "Helvetica Neue", "Helvetica", Helvetica, "Apple LiGothic", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-font-size-adjust: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* line 22, ../sass/main.scss */
+/* line 25, ../sass/main.scss */
 a {
   text-decoration: none;
 }
@@ -210,7 +212,7 @@ html {
 
 /* -------------------------------------------------------------------------*/
 /* Layout */
-/* line 32, ../sass/main.scss */
+/* line 35, ../sass/main.scss */
 .container {
   *zoom: 1;
   padding-left: 25px;
@@ -233,40 +235,40 @@ html {
   clear: both;
 }
 
-/* line 37, ../sass/main.scss */
+/* line 40, ../sass/main.scss */
 .clearfix, .page {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 41, ../sass/main.scss */
+/* line 44, ../sass/main.scss */
 .clearfix:before, .page:before, .clearfix:after, .page:after {
   display: table;
   content: "";
   line-height: 0;
 }
-/* line 48, ../sass/main.scss */
+/* line 51, ../sass/main.scss */
 .clearfix:after, .page:after {
   clear: both;
 }
 
 /* Header */
-/* line 55, ../sass/main.scss */
+/* line 58, ../sass/main.scss */
 #header {
   background: #3498db;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 60, ../sass/main.scss */
+/* line 63, ../sass/main.scss */
 #header h1 {
   display: block;
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('/images/logo.png?1363239655');
+  background: url('/images/logo.png?1370326001');
   text-indent: -999999px;
 }
 @media (max-width: 480px) {
-  /* line 60, ../sass/main.scss */
+  /* line 63, ../sass/main.scss */
   #header h1 {
     width: 250px;
     height: 250px;
@@ -275,22 +277,22 @@ html {
 }
 
 /* Header - Navigation */
-/* line 83, ../sass/main.scss */
+/* line 86, ../sass/main.scss */
 #main-menu {
   width: auto;
   text-align: center;
 }
-/* line 88, ../sass/main.scss */
+/* line 91, ../sass/main.scss */
 #main-menu ul {
   margin: 0;
   padding: 0;
   font-size: 0;
 }
-/* line 94, ../sass/main.scss */
+/* line 97, ../sass/main.scss */
 #main-menu li {
   display: inline;
 }
-/* line 98, ../sass/main.scss */
+/* line 101, ../sass/main.scss */
 #main-menu a {
   color: white;
   display: inline-block;
@@ -304,19 +306,19 @@ html {
   transition: 0.5s;
 }
 @media (max-width: 320px) {
-  /* line 98, ../sass/main.scss */
+  /* line 101, ../sass/main.scss */
   #main-menu a {
     display: block;
   }
 }
-/* line 117, ../sass/main.scss */
+/* line 120, ../sass/main.scss */
 #main-menu a:hover, #main-menu a.active {
   color: #3498db;
   background: #f2f2f2;
 }
 
 /* Footer */
-/* line 127, ../sass/main.scss */
+/* line 130, ../sass/main.scss */
 #footer {
   color: white;
   background: #3498db;
@@ -324,12 +326,12 @@ html {
 }
 
 /* About */
-/* line 136, ../sass/main.scss */
+/* line 139, ../sass/main.scss */
 #about {
   margin-top: 3em;
 }
 
-/* line 140, ../sass/main.scss */
+/* line 143, ../sass/main.scss */
 #avatar {
   width: 100%;
   float: left;
@@ -339,7 +341,7 @@ html {
   text-align: center;
 }
 
-/* line 146, ../sass/main.scss */
+/* line 149, ../sass/main.scss */
 #self-intro {
   width: 48.93617%;
   float: left;
@@ -350,7 +352,7 @@ html {
   margin-right: 25.53191%;
 }
 @media (max-width: 767px) {
-  /* line 146, ../sass/main.scss */
+  /* line 149, ../sass/main.scss */
   #self-intro {
     width: 100%;
     float: left;
@@ -359,38 +361,38 @@ html {
     margin-right: 0%;
   }
 }
-/* line 155, ../sass/main.scss */
+/* line 158, ../sass/main.scss */
 #self-intro > article {
   padding: 1.5em;
   letter-spacing: .15em;
 }
-/* line 161, ../sass/main.scss */
+/* line 164, ../sass/main.scss */
 #self-intro h2 {
   font-weight: normal;
 }
 
 /* Skills */
 /* Portfolio */
-/* line 175, ../sass/main.scss */
+/* line 178, ../sass/main.scss */
 #portfolio .filter {
   text-align: center;
 }
-/* line 177, ../sass/main.scss */
+/* line 180, ../sass/main.scss */
 #portfolio .filter ul {
   padding: 0;
 }
-/* line 178, ../sass/main.scss */
+/* line 181, ../sass/main.scss */
 #portfolio .filter li {
   display: inline;
 }
-/* line 179, ../sass/main.scss */
+/* line 182, ../sass/main.scss */
 #portfolio .filter a {
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-/* line 187, ../sass/main.scss */
+/* line 190, ../sass/main.scss */
 #portfolio article {
   float: left;
   text-align: left;
@@ -410,7 +412,7 @@ html {
   transition: 0.5s;
 }
 @media (max-width: 767px) {
-  /* line 187, ../sass/main.scss */
+  /* line 190, ../sass/main.scss */
   #portfolio article {
     width: 31.91489%;
     float: left;
@@ -419,7 +421,7 @@ html {
   }
 }
 @media (max-width: 480px) {
-  /* line 187, ../sass/main.scss */
+  /* line 190, ../sass/main.scss */
   #portfolio article {
     width: 48.93617%;
     float: left;
@@ -427,7 +429,7 @@ html {
     margin-left: 0.6383%;
   }
 }
-/* line 212, ../sass/main.scss */
+/* line 215, ../sass/main.scss */
 #portfolio article.hide {
   width: 0;
   padding: 0;
@@ -435,7 +437,7 @@ html {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-/* line 219, ../sass/main.scss */
+/* line 222, ../sass/main.scss */
 #portfolio article h2 {
   position: absolute;
   bottom: 0;
@@ -459,19 +461,19 @@ html {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-/* line 244, ../sass/main.scss */
+/* line 247, ../sass/main.scss */
 #portfolio article:hover h2 {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 247, ../sass/main.scss */
+/* line 250, ../sass/main.scss */
 #portfolio article .thumb {
   position: relative;
   width: 100%;
   max-width: 320px;
   padding-top: 56.25%;
 }
-/* line 255, ../sass/main.scss */
+/* line 258, ../sass/main.scss */
 #portfolio article .thumb img {
   position: absolute;
   top: 0;
@@ -480,7 +482,7 @@ html {
 }
 
 /* Contact */
-/* line 268, ../sass/main.scss */
+/* line 271, ../sass/main.scss */
 #contact article {
   margin-top: 1em;
   width: 48.93617%;
@@ -501,7 +503,7 @@ html {
   margin-right: 2.12766%;
 }
 @media (max-width: 767px) {
-  /* line 268, ../sass/main.scss */
+  /* line 271, ../sass/main.scss */
   #contact article {
     width: 100%;
     float: left;
@@ -510,7 +512,7 @@ html {
     margin-right: 0%;
   }
 }
-/* line 286, ../sass/main.scss */
+/* line 289, ../sass/main.scss */
 #contact article h2 {
   text-align: left;
 }
