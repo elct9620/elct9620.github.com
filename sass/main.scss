@@ -1,294 +1,82 @@
-// ---------------------------------------------------------------------------
-// Imports
 
-@import "base";
-@import "ui";
-@import "card";
+@import "compass/css3";
 
-// Fonts
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700,600");
+$baseColor: #7FCDEE;
 
-/* Basic UI */
 body {
-  color: $dark-color;
-  background: $bg-color;
-
-  font-family: "Open Sans", "微軟正黑體", "Helvetica Neue", "Helvetica", Helvetica, "Apple LiGothic", Arial, sans-serif;
+  background: #F2F2F2;
+  font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", serif;
 
   -webkit-font-smoothing: antialiased;
-  -webkit-font-size-adjust: none;
-
-  margin: 0;
-  padding: 0;
+  font-smoothing: antialiased;
+  font-smooth: always;
 }
 
 a {
   text-decoration: none;
 }
 
-/* Typography */
-@include establish-baseline;
-
-/* -------------------------------------------------------------------------*/
-/* Layout */
-
-.container {
-  @include container;
-  @include susy-grid-background;
-}
-
-.clearfix {
-  @include clearfix;
-
-  &:before,
-  &:after {
-    display: table;
-    content: "";
-
-    line-height: 0;
-  }
-
-  &:after {
-    clear: both;
-  }
-}
-
-/* Header */
-
-#header {
-  background: $base-color;
-
-  @include clearfix;
-
-  h1 {
-    display: block;
-
-    width: 300px;
-    height: 300px;
-
-    margin: 0 auto;
-
-    background: image-url('logo.png');
-
-    text-indent: -999999px;
-
-    @include at-breakpoint(1 12 480px) {
-      width: 250px;
-      height: 250px;
-
-      background-size: contain;
-    }
-  }
-
-}
-
-/* Header - Navigation */
-#main-menu {
-  width: auto;
+#main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -144px;
+  margin-top: -170px;
 
   text-align: center;
+  text-transform: uppercase;
+
+  h1 {
+    color: $baseColor;
+    font-size: 144px;
+    font-weight: lighter;
+    line-height: 144px;
+    margin: 14px auto;
+  }
+}
+
+#menu {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 24px;
+  margin-top: -86px;
 
   ul {
-    margin: 0;
     padding: 0;
-    font-size: 0;
   }
 
   li {
-    display: inline;
+    list-style: none;
+    margin-bottom: 0.75em;
   }
 
   a {
-    color: $secondary-color;
+    color: white;
+    background: $baseColor;
+    padding: 0.25em 0.5em 0.25em 1em;
 
-    display: inline-block;
-    @include at-breakpoint($small-handheld) {
-      display: block;
-    }
-
-    padding: 0 1em;
-
-    line-height: 45px;
-    height: 45px;
-
-    font-size: $base-font-size;
-
-    //float: left;
-
-    @include transition(0.5s);
-
-    &:hover, &.active {
-      color: $base-color;
-
-      background: $bg-color;
-    }
-  }
-}
-
-/* Footer */
-
-#footer {
-  color: $secondary-color;
-  background: $base-color;
-
-  margin-top: 2em;
-}
-
-/* About */
-
-#about {
-  margin-top: 3em;
-}
-
-#avatar {
-  @include span-columns(12 omega);
-
-  text-align: center;
-}
-
-#self-intro {
-  @include span-columns(6 omega);
-  @include squish(3,3);
-
-  @include at-breakpoint($tablet) {
-    @include span-columns(12 omega);
-    @include squish(0, 0);
-  }
-
-  & > article {
-    padding: 1.5em;
-
-    letter-spacing: .15em;
-  }
-
-  h2 {
-    font-weight: normal;
-  }
-}
-
-/* Skills */
-
-#skills{
-
-}
-
-/* Portfolio */
-
-#portfolio {
-  .filter {
-    text-align: center;
-    ul{ padding: 0; }
-    li { display: inline; }
-    a{
-      @include transition(.5s);
-      &:hover, &.active {
-        @extend .label-dark;
-      }
-    }
-  }
-
-  article {
-    float: left;
-
-    text-align: left;
-
-    @include span-columns(3 omega);
-    @include push(0.25);
-
-    @include at-breakpoint($tablet) {
-      @include span-columns(4 omega);
-      @include push(0.2);
-    }
-
-    @include at-breakpoint($handheld) {
-      @include span-columns(6 omega);
-      @include push(0.1);
-    }
-
-    margin-top: 1em;
-
-    position: relative;
-
-    @include opacity(1);
-    @include transition(.5s);
-
-    &.hide {
-      width: 0;
-      padding: 0;
-      margin: 0;
-      @include opacity(0);
-    }
-
-    h2 {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-
-      z-index: 99;
-
-      width: 100%;
-
-      font-size: $base-font-size;
-      text-align: right;
-
-      margin: 0;
-      padding-right: 1em;
-
-      color: $secondary-color;
-      background: $dark-color;
-      background: rgba($dark-color, .9);
-
-      @include opacity(0);
-      @include box-sizing(border-box);
-      @include transition(.5s);
-    }
+    @include transition(1s);
 
     &:hover {
-      h2 { @include opacity(1); }
-    }
-
-    .thumb {
-      position: relative;
-
-      width: 100%;
-      max-width: 320px;
-
-      padding-top: 100% * 9 / 16;
-
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        width: 100%;
-      }
+      background: darken($baseColor, 25%);
     }
   }
 }
 
-/* Contact */
-#contact {
-  article {
-    margin-top: 1em;
+@media (max-width: 480px) {
+  #main, #menu {
+    position: static;
+    margin: 0 auto;
+  }
 
-    @include span-columns(6 omega);
-    @include remove-nth-omega(2n);
+  #menu {
+    text-align: center;
 
-    @include at-breakpoint($tablet) {
-      @include span-columns(12 omega);
-      @include squish(0, 0);
-    }
-
-    padding: 1em;
-
-    @include box-sizing(border-box);
-
-    color: $secondary-color;
-    background: $base-color;
-
-    h2 {
-      text-align: left;
+    a {
+      padding: 0.25em 0.5em;
     }
   }
 }
-
