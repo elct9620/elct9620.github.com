@@ -1,518 +1,83 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700,600");
-/* UI Elements */
-/* line 9, ../sass/_ui.scss */
-.hide {
-  display: none;
-}
-
-/* line 17, ../sass/_ui.scss */
-.uppercase {
-  text-transform: uppercase;
-}
-
-/* line 21, ../sass/_ui.scss */
-.lowercase {
-  text-transform: lowercase;
-}
-
-/* line 25, ../sass/_ui.scss */
-.text-normal {
-  font-weight: normal;
-}
-
-/* line 33, ../sass/_ui.scss */
-.page {
-  margin-top: 2em;
-}
-/* line 38, ../sass/_ui.scss */
-.page header {
-  text-align: center;
-}
-
-/* line 47, ../sass/_ui.scss */
-.color-block {
-  color: white;
-  background: #3498db;
-}
-/* line 51, ../sass/_ui.scss */
-.color-block a {
-  color: white;
-}
-
-/* line 61, ../sass/_ui.scss */
-.ellipse {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-}
-
-/* line 66, ../sass/_ui.scss */
-.round {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-}
-
-/* line 78, ../sass/_ui.scss */
-.top-arrow {
-  padding-top: 40px;
-  position: relative;
-}
-/* line 82, ../sass/_ui.scss */
-.top-arrow:after {
-  content: " ";
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  margin-left: -20px;
-  display: block;
-  width: 0;
-  height: 0;
-  border: 20px solid transparent;
-  border-bottom: 20px solid #3498db;
-}
-
-/* line 78, ../sass/_ui.scss */
-.bottom-arrow {
-  padding-top: 40px;
-  position: relative;
-}
-/* line 82, ../sass/_ui.scss */
-.bottom-arrow:after {
-  content: " ";
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  margin-left: -20px;
-  display: block;
-  width: 0;
-  height: 0;
-  border: 20px solid transparent;
-  border-top: 20px solid #3498db;
-}
-
-/* line 100, ../sass/_ui.scss */
-.label, .label-dark, #portfolio .filter a:hover, #portfolio .filter a.active, .label-light {
-  color: white;
-  background: #3498db;
-  padding: .25em .5em;
-}
-
-/* line 107, ../sass/_ui.scss */
-.label-dark, #portfolio .filter a:hover, #portfolio .filter a.active {
-  background: #124364;
-}
-
-/* line 113, ../sass/_ui.scss */
-.label-light {
-  color: #124364;
-  background: white;
-}
-
-/* line 124, ../sass/_ui.scss */
-.small-title {
-  font-size: .75em;
-}
-
-/** Skill Card */
-/* line 3, ../sass/_card.scss */
-.card {
-  color: white;
-  background: #3498db;
-  padding: 1em 0;
-  margin-top: 1em;
-  width: 23.40426%;
-  float: left;
-  margin-right: 0;
-  #margin-right: -20px;
-  display: inline;
-  margin-left: 1.59574%;
-}
-@media (max-width: 767px) {
-  /* line 3, ../sass/_card.scss */
-  .card {
-    width: 31.91489%;
-    float: left;
-    margin-right: 0;
-    margin-left: 1.2766%;
-  }
-}
-@media (max-width: 480px) {
-  /* line 3, ../sass/_card.scss */
-  .card {
-    width: 48.93617%;
-    float: left;
-    margin-right: 0;
-    margin-left: 0.6383%;
-  }
-}
-/* line 23, ../sass/_card.scss */
-.card .skill-bar {
-  background: white;
-  padding: 1px;
-  margin: 0 auto;
-  height: 1.5em;
-  width: 90%;
-}
-/* line 33, ../sass/_card.scss */
-.card .skill-inner {
-  background: #3498db;
-  height: 100%;
-}
-/* line 39, ../sass/_card.scss */
-.card.light {
-  color: #124364;
-  background: #b6daf2;
-}
-/* line 43, ../sass/_card.scss */
-.card.light .skill-inner {
-  background: #b6daf2;
-}
-/* line 48, ../sass/_card.scss */
-.card.dark {
-  background: #124364;
-}
-/* line 51, ../sass/_card.scss */
-.card.dark .skill-inner {
-  background: #124364;
-}
-
-/* Basic UI */
-/* line 12, ../sass/main.scss */
+/* line 6, ../sass/main.scss */
 body {
-  color: #124364;
-  background: #f2f2f2;
-  font-family: "Open Sans", "微軟正黑體", "Helvetica Neue", "Helvetica", Helvetica, "Apple LiGothic", Arial, sans-serif;
+  background: #F2F2F2;
+  font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", serif;
   -webkit-font-smoothing: antialiased;
-  -webkit-font-size-adjust: none;
-  margin: 0;
-  padding: 0;
+  font-smoothing: antialiased;
+  font-smooth: always;
 }
 
-/* line 25, ../sass/main.scss */
+/* line 15, ../sass/main.scss */
 a {
   text-decoration: none;
 }
 
-/* Typography */
-/* line 61, ../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
-* html {
-  font-size: 75%;
+/* line 19, ../sass/main.scss */
+#main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -144px;
+  margin-top: -170px;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 29, ../sass/main.scss */
+#main h1 {
+  color: #7fcdee;
+  font-size: 144px;
+  font-weight: lighter;
+  line-height: 144px;
+  margin: 14px auto;
 }
 
-/* line 64, ../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
-html {
-  font-size: 12px;
-  line-height: 2em;
+/* line 38, ../sass/main.scss */
+#menu {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 24px;
+  margin-top: -86px;
 }
-
-/* -------------------------------------------------------------------------*/
-/* Layout */
-/* line 35, ../sass/main.scss */
-.container {
-  *zoom: 1;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-background-origin: content;
-  -moz-background-origin: content;
-  -ms-background-origin: content-box;
-  -o-background-origin: content-box;
-  background-origin: content-box;
-  -webkit-background-clip: content-box;
-  -moz-background-clip: content-box;
-  background-clip: content-box;
-}
-/* line 38, ../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.container:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 40, ../sass/main.scss */
-.clearfix, .page {
-  overflow: hidden;
-  *zoom: 1;
-}
-/* line 44, ../sass/main.scss */
-.clearfix:before, .page:before, .clearfix:after, .page:after {
-  display: table;
-  content: "";
-  line-height: 0;
+/* line 47, ../sass/main.scss */
+#menu ul {
+  padding: 0;
 }
 /* line 51, ../sass/main.scss */
-.clearfix:after, .page:after {
-  clear: both;
+#menu li {
+  list-style: none;
+  margin-bottom: 0.75em;
 }
-
-/* Header */
-/* line 58, ../sass/main.scss */
-#header {
-  background: #3498db;
-  overflow: hidden;
-  *zoom: 1;
+/* line 56, ../sass/main.scss */
+#menu a {
+  color: white;
+  background: #7fcdee;
+  padding: 0.25em 0.5em 0.25em 1em;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 /* line 63, ../sass/main.scss */
-#header h1 {
-  display: block;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  background: url('/images/logo.png?1370326001');
-  text-indent: -999999px;
+#menu a:hover {
+  background: #1c9cd2;
 }
+
 @media (max-width: 480px) {
-  /* line 63, ../sass/main.scss */
-  #header h1 {
-    width: 250px;
-    height: 250px;
-    background-size: contain;
+  /* line 70, ../sass/main.scss */
+  #main, #menu {
+    position: static;
+    margin: 0 auto;
   }
-}
 
-/* Header - Navigation */
-/* line 86, ../sass/main.scss */
-#main-menu {
-  width: auto;
-  text-align: center;
-}
-/* line 91, ../sass/main.scss */
-#main-menu ul {
-  margin: 0;
-  padding: 0;
-  font-size: 0;
-}
-/* line 97, ../sass/main.scss */
-#main-menu li {
-  display: inline;
-}
-/* line 101, ../sass/main.scss */
-#main-menu a {
-  color: white;
-  display: inline-block;
-  padding: 0 1em;
-  line-height: 45px;
-  height: 45px;
-  font-size: 12px;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-@media (max-width: 320px) {
-  /* line 101, ../sass/main.scss */
-  #main-menu a {
-    display: block;
+  /* line 75, ../sass/main.scss */
+  #menu {
+    text-align: center;
   }
-}
-/* line 120, ../sass/main.scss */
-#main-menu a:hover, #main-menu a.active {
-  color: #3498db;
-  background: #f2f2f2;
-}
-
-/* Footer */
-/* line 130, ../sass/main.scss */
-#footer {
-  color: white;
-  background: #3498db;
-  margin-top: 2em;
-}
-
-/* About */
-/* line 139, ../sass/main.scss */
-#about {
-  margin-top: 3em;
-}
-
-/* line 143, ../sass/main.scss */
-#avatar {
-  width: 100%;
-  float: left;
-  margin-right: 0;
-  #margin-right: -20px;
-  display: inline;
-  text-align: center;
-}
-
-/* line 149, ../sass/main.scss */
-#self-intro {
-  width: 48.93617%;
-  float: left;
-  margin-right: 0;
-  #margin-right: -20px;
-  display: inline;
-  margin-left: 25.53191%;
-  margin-right: 25.53191%;
-}
-@media (max-width: 767px) {
-  /* line 149, ../sass/main.scss */
-  #self-intro {
-    width: 100%;
-    float: left;
-    margin-right: 0;
-    margin-left: 0%;
-    margin-right: 0%;
+  /* line 78, ../sass/main.scss */
+  #menu a {
+    padding: 0.25em 0.5em;
   }
-}
-/* line 158, ../sass/main.scss */
-#self-intro > article {
-  padding: 1.5em;
-  letter-spacing: .15em;
-}
-/* line 164, ../sass/main.scss */
-#self-intro h2 {
-  font-weight: normal;
-}
-
-/* Skills */
-/* Portfolio */
-/* line 178, ../sass/main.scss */
-#portfolio .filter {
-  text-align: center;
-}
-/* line 180, ../sass/main.scss */
-#portfolio .filter ul {
-  padding: 0;
-}
-/* line 181, ../sass/main.scss */
-#portfolio .filter li {
-  display: inline;
-}
-/* line 182, ../sass/main.scss */
-#portfolio .filter a {
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-/* line 190, ../sass/main.scss */
-#portfolio article {
-  float: left;
-  text-align: left;
-  width: 23.40426%;
-  float: left;
-  margin-right: 0;
-  #margin-right: -20px;
-  display: inline;
-  margin-left: 1.59574%;
-  margin-top: 1em;
-  position: relative;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-@media (max-width: 767px) {
-  /* line 190, ../sass/main.scss */
-  #portfolio article {
-    width: 31.91489%;
-    float: left;
-    margin-right: 0;
-    margin-left: 1.2766%;
-  }
-}
-@media (max-width: 480px) {
-  /* line 190, ../sass/main.scss */
-  #portfolio article {
-    width: 48.93617%;
-    float: left;
-    margin-right: 0;
-    margin-left: 0.6383%;
-  }
-}
-/* line 215, ../sass/main.scss */
-#portfolio article.hide {
-  width: 0;
-  padding: 0;
-  margin: 0;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-}
-/* line 222, ../sass/main.scss */
-#portfolio article h2 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-  width: 100%;
-  font-size: 12px;
-  text-align: right;
-  margin: 0;
-  padding-right: 1em;
-  color: white;
-  background: #124364;
-  background: rgba(18, 67, 100, 0.9);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-/* line 247, ../sass/main.scss */
-#portfolio article:hover h2 {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-/* line 250, ../sass/main.scss */
-#portfolio article .thumb {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  padding-top: 56.25%;
-}
-/* line 258, ../sass/main.scss */
-#portfolio article .thumb img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-/* Contact */
-/* line 271, ../sass/main.scss */
-#contact article {
-  margin-top: 1em;
-  width: 48.93617%;
-  float: left;
-  margin-right: 0;
-  #margin-right: -20px;
-  display: inline;
-  padding: 1em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  color: white;
-  background: #3498db;
-}
-/* line 248, ../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.5/sass/susy/_grid.scss */
-#contact article:nth-child(2n) {
-  float: left;
-  margin-right: 2.12766%;
-}
-@media (max-width: 767px) {
-  /* line 271, ../sass/main.scss */
-  #contact article {
-    width: 100%;
-    float: left;
-    margin-right: 0;
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-}
-/* line 289, ../sass/main.scss */
-#contact article h2 {
-  text-align: left;
 }
