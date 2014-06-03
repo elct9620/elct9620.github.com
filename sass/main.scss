@@ -1,82 +1,9 @@
+// Library
+@import "normalize";
 
-@import "compass/css3";
+@import "compass";
+@import "susy";
 
-$baseColor: #7FCDEE;
-
-body {
-  background: #F2F2F2;
-  font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", serif;
-
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  font-smooth: always;
-}
-
-a {
-  text-decoration: none;
-}
-
-#main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -144px;
-  margin-top: -170px;
-
-  text-align: center;
-  text-transform: uppercase;
-
-  h1 {
-    color: $baseColor;
-    font-size: 144px;
-    font-weight: lighter;
-    line-height: 144px;
-    margin: 14px auto;
-  }
-}
-
-#menu {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  text-transform: uppercase;
-  text-align: right;
-  font-size: 24px;
-  margin-top: -86px;
-
-  ul {
-    padding: 0;
-  }
-
-  li {
-    list-style: none;
-    margin-bottom: 0.75em;
-  }
-
-  a {
-    color: white;
-    background: $baseColor;
-    padding: 0.25em 0.5em 0.25em 1em;
-
-    @include transition(1s);
-
-    &:hover {
-      background: darken($baseColor, 25%);
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  #main, #menu {
-    position: static;
-    margin: 0 auto;
-  }
-
-  #menu {
-    text-align: center;
-
-    a {
-      padding: 0.25em 0.5em;
-    }
-  }
-}
+// Partials
+@import "settings";
+@import "base";

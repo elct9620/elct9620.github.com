@@ -1,0 +1,25 @@
+!!! 5
+
+%html.no-js{:lang => "zh-TW"}
+
+    %head
+
+        %meta{:charset => "utf-8"}
+        %title Studio F // 蒼時弦也
+        %meta{:name => "description", :content => ""}
+        %meta{:name => "viewport",  :content => "width=device-width, initial-scale=1"}
+
+        = stylesheet_link_tag "main"
+        = javascript_include_tag "/bower_components/modernizr/modernizr"
+
+    %body
+        / [if lt IE 7]
+            %p.browsehappy You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+
+        = content_for?(:page_content) ? yield(:page_content) : yield
+
+        = render "partials/analytics.html.erb" if enable_analytics?
+        = render "partials/justfont.html.erb"
+        = render "partials/scripts"
+
+        = livereload_js unless ENV["RACK_ENV"] == "production"
