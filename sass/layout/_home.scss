@@ -1,0 +1,37 @@
+// Home Layout
+
+#about-me{
+
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+
+  h1 {
+    @include adjust-font-size-to(100px, 4, 32px);
+    @include rhythm(1, 1, 1, 0, 100px);
+  }
+  h2 {
+    @include adjust-font-size-to(36px, 1.5, 24px);
+    @include rhythm(1, 1, 1, 0, 36px);
+  }
+
+  .block {
+    display: inline-block;
+    padding-right: 32px;
+    padding-left: 32px;
+
+    color: white;
+    font-weight: normal;
+
+    background: $primary-color;
+    background: rgba($primary-color, .9);
+  }
+}
+
+#logo-full {
+  position: absolute;
+  bottom: -1%;
+  left: 1%;
+
+  @include replace-text-with-svg("logo-full");
+}

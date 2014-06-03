@@ -1,0 +1,7 @@
+// Section
+
+.section {
+  position: relative;
+
+  @include clearfix;
+}

@@ -11,4 +11,7 @@ body {
   background: $background-color;
 
   font-family: "IPAmj明朝", "IPAmjMincho", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ＭＳ 明朝", "MS Mincho", serif;
+  @include font-smoothing(on);
 }
+
+@include establish-baseline;
