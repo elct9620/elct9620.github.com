@@ -1,0 +1,8 @@
+// Contact
+
+#contact {
+  @include rhythm(0, 2, 2, 0);
+
+  a { text-decoration: none; }
+  img { border: 0; }
+}
