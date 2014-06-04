@@ -5,4 +5,8 @@
 
   a { text-decoration: none; }
   img { border: 0; }
+  a.label:hover {
+    background: $timeline-color;
+    @include transition(200ms);
+  }
 }
