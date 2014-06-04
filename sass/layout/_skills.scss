@@ -1,0 +1,46 @@
+// Skills
+
+#skills {
+  @include rhythm(0, 2, 2, 0);
+
+  h4 { @include rhythm(0.5, 0.25, 0.25, 0.5) }
+
+  .left { @include span-columns(6); }
+  .right { @include span-columns(6 omega) }
+
+  ul { padding-left: 0; }
+
+  li {
+    list-style: none;
+    position: relative;
+  }
+
+  .score {
+    width: 30%;
+    height: 1em;
+
+    padding: 1px;
+
+    float: right;
+
+    background: white;
+
+    &:after {
+      position: absolute;
+      content: " ";
+
+      width: 0%;
+      height: 1em;
+
+      background: $timeline-color;
+
+      @include transition(1s ease);
+    }
+  }
+
+  @for $i from 1 through 5 {
+    .score-#{$i}:after {
+      width: (20% * $i) * 0.3;
+    }
+  }
+}
