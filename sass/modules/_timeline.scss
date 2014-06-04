@@ -1,0 +1,77 @@
+// Timeline
+
+.timeline {
+  position: relative;
+  padding: 0;
+  @include rhythm(0, 1, 1, 0);
+
+  @include clearfix;
+
+  &:before {
+    display: block;
+    content: " ";
+
+    position: absolute;
+    top: -1em;
+    left: 50%;
+
+    width: 6px;
+    height: 100%;
+
+    margin-left: -3px;
+
+    background: $timeline-color;
+  }
+}
+
+.timeline li {
+  list-style: none;
+  @include rhythm(0, 1, 1, 0);
+  @include clearfix;
+
+  .right {
+    position: relative;
+    @include span-columns(6 omega);
+    float: right;
+
+    .flag, .detail { padding-left: 1em; }
+    .flag:before { right: 100%; margin-right: -1px; }
+  }
+
+  .left {
+    position: relative;
+    @include span-columns(6);
+    float: left;
+    text-align: right;
+
+    .flag, .detail { padding-right: 1em; }
+    .flag:before { left: 100%; margin-left: -1px; }
+  }
+
+  .flag {
+    &:before {
+      display: block;
+      content: " ";
+
+      position: absolute;
+      top: 0.5em;
+
+      height: 0.5em;
+      width: 0.5em;
+
+      border: 5px solid $timeline-color;
+      @include border-radius(50%);
+
+      background: white;
+    }
+  }
+
+  .item {
+    @include rhythm(0.25, 0, 0, 0.25);
+  }
+
+  h4 {
+    font-weight: normal;
+    @include rhythm(0, 0.25, 0.25, 0);
+  }
+}

@@ -1,0 +1,16 @@
+// About Me
+
+#about-me {
+  @include rhythm(0, 2, 2, 0);
+
+  background: white;
+
+  h2 {
+    @include rhythm(1, 2, 0, 1, 24px);
+  }
+
+  .description {
+    @include isolate(4);
+    @include span-columns(6);
+  }
+}

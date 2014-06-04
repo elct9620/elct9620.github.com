@@ -15,3 +15,7 @@ body {
 }
 
 @include establish-baseline;
+
+p {
+  @include rhythm(0.5, 0.5, 0.5, 0.5);
+}
