@@ -4,6 +4,11 @@ module ViewHelpers
     data
   end
 
+  def works
+    data ||= YAML.load_file(File.join(File.dirname(__FILE__), "works.yml"))
+    data["works"]
+  end
+
   def enable_analytics?
     config['analytics']['enabled']
   end

@@ -1,0 +1,11 @@
+%section#works.section
+  %h2.uppercase.centered Works
+  .container
+    - works.each do |item|
+      .item
+        %a.wrapper{ :href => item["link"], :target => "_blank" }
+          =image_tag "works/" + item["thumbnail"], :class => "thumbnail"
+          .cover
+            .time= item["time"]
+            .description= item["description"]
+

@@ -1,0 +1,26 @@
+works:
+  -
+    thumbnail: painting-2.jpg
+    time: 2014
+    description: For my interactive design class, I design a vector chinese tower.
+    link: https://www.behance.net/gallery/17252977/Chinese-Tower
+  -
+    thumbnail: web-design-2.jpg
+    time: 2014
+    description: SITCON 2014 offical website.
+    link: https://www.behance.net/gallery/15351759/SITCON-2014-Official-Website
+  -
+    thumbnail: web-design-1.jpg
+    time: 2013
+    description: The homework, my school's crative thinking class.
+    link: https://www.behance.net/gallery/9019753/2013-Homework-Creative-Thinking
+  -
+    thumbnail: painting-1.jpg
+    time: 2013
+    description: The homework, my school's CG class.
+    link: https://www.behance.net/gallery/9019149/2013-CG-Homework
+  -
+    thumbnail: photography-1.jpg
+    time: 2012
+    description: Take by HTC One X.
+    link: https://www.behance.net/gallery/9019385/My-Photos

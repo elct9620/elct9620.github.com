@@ -18,8 +18,9 @@ SECTIONS = {
 
 enabledScore = false
 page.section SECTIONS.SKILL, (section) ->
-  section.on "scrollIn", ->
+  section.on "progress", (progress)->
     return if enabledScore # Prevent run everytimes
+    return if progress < 50
     $("#skills .score").each (index, element) ->
       element = $(element)
       element.addClass("score-" + element.data("score"))
