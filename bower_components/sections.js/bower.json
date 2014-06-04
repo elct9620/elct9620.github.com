@@ -1,0 +1,19 @@
+{
+  "name": "sections.js",
+  "version": "0.1.5",
+  "main": "dist/sectionsjs.js",
+  "homepage": "https://github.com/poying/sections.js",
+  "authors": [
+    "Po-Ying Chen <poying.me@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "demo"
+  ]
+}

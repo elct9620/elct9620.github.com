@@ -1,0 +1,1 @@
+{"mtime":1401760465,"js":"/*\n# Main Script\n*/\n\n\n(function() {\n  var $window, fullPage;\n\n  $window = $(window);\n\n  fullPage = $(\".full-page\");\n\n  fullPage.height($window.height());\n\n  $(window).on(\"resize\", function(e) {\n    return fullPage.height($window.height());\n  });\n\n}).call(this);\n"}
