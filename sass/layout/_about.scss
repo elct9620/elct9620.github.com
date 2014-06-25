@@ -12,7 +12,12 @@
   }
 
   .description {
-    @include isolate(4);
-    @include span-columns(6);
+    @include isolate(2);
+    @include span-columns(10);
+
+    @include at-breakpoint($ipad) {
+      @include isolate(4);
+      @include span-columns(6);
+    }
   }
 }

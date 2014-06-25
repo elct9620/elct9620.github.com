@@ -7,3 +7,7 @@
   @include opacity(0);
   @include transition(500ms);
 }
+
+.hidden {
+  display: none;
+}

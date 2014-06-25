@@ -5,8 +5,20 @@
 
   h4 { @include rhythm(0.5, 0.25, 0.25, 0.5) }
 
-  .left { @include span-columns(6); }
-  .right { @include span-columns(6 omega) }
+  .left {
+    @include span-columns(12);
+
+    @include at-breakpoint($desktop) {
+     @include span-columns(6);
+    }
+  }
+  .right {
+    @include span-columns(12);
+
+    @include at-breakpoint($desktop) {
+      @include span-columns(6 omega);
+    }
+  }
 
   ul { padding-left: 0; }
 

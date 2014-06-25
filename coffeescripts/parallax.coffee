@@ -45,6 +45,10 @@ page.section SECTIONS.HOME, (section) ->
 
   section.transitions(transitions)
 
+  section.on "progress", (progress) ->
+    return scrollDownNotice.className = "hidden" if progress > 150
+    return scrollDownNotice.className = "" if progress < 150
+
 page.section SECTIONS.ABOUT, (section) ->
   section.on "progress", (progress) ->
     return if enabledAbout

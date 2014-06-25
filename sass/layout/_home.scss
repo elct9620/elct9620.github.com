@@ -31,13 +31,20 @@
 
 #logo-full {
   position: absolute;
-  top: 0;
+  top: -50%;
   bottom: 0;
-  left: 0;
+  left: -50%;
   right: 0;
 
   @include replace-text-with-svg("logo-full");
 
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: 200%;
+
+  @include at-breakpoint($ipad) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

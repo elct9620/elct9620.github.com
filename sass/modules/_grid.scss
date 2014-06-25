@@ -2,4 +2,12 @@
 
 .container {
   @include container;
+
+  @include at-breakpoint($ipad) {
+    @include container;
+  }
+
+  @include at-breakpoint($desktop) {
+    @include container;
+  }
 }
