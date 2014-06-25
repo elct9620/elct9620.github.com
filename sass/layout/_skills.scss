@@ -50,6 +50,19 @@
     }
   }
 
+  .rank {
+    position: absolute;
+    z-index: 1;
+
+    padding-left: 0.5em;
+    @include adjust-font-size-to(12px, 0.75);
+
+    color: white;
+    text-transform: uppercase;
+
+    font-family: "Open Sans", snas-serif;
+  }
+
   @for $i from 1 through 5 {
     .score-#{$i}:after {
       width: (20% * $i) * 0.3;
