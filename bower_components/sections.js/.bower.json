@@ -24,6 +24,5 @@
   },
   "_source": "git://github.com/poying/sections.js.git",
   "_target": "~0.1.5",
-  "_originalSource": "sections.js",
-  "_direct": true
+  "_originalSource": "sections.js"
 }

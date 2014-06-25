@@ -21,6 +21,39 @@
 
   enabledAbout = false;
 
+  page.section(SECTIONS.HOME, function(section) {
+    var nickname, scrollDownNotice, transitions;
+
+    scrollDownNotice = document.querySelector("#scroll-down-notice");
+    nickname = document.querySelector("#nickname");
+    transitions = [];
+    transitions.push({
+      target: scrollDownNotice,
+      start: 100,
+      end: 150,
+      key: 'opacity',
+      from: 1,
+      to: 0
+    });
+    transitions.push({
+      target: nickname,
+      start: 100,
+      end: 150,
+      key: 'opacity',
+      from: 1,
+      to: 0
+    });
+    section.transitions(transitions);
+    return section.on("progress", function(progress) {
+      if (progress > 150) {
+        return scrollDownNotice.className = "hidden";
+      }
+      if (progress < 150) {
+        return scrollDownNotice.className = "";
+      }
+    });
+  });
+
   page.section(SECTIONS.ABOUT, function(section) {
     return section.on("progress", function(progress) {
       if (enabledAbout) {
@@ -49,6 +82,22 @@
       });
       return enabledScore = true;
     });
+  });
+
+  page.section(SECTIONS.WORKS, function(section) {
+    var transitions, works;
+
+    works = document.querySelector("#works");
+    transitions = [];
+    transitions.push({
+      target: works,
+      start: 0,
+      end: 70,
+      key: 'opacity',
+      from: 0,
+      to: 1
+    });
+    return section.transitions(transitions);
   });
 
   $(document).ready(function() {

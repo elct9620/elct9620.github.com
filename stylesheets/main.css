@@ -312,6 +312,30 @@ p {
   margin-bottom: 0.75em;
 }
 
+/* line 24, ../sass/_base.scss */
+#scroll-down-notice {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 3em;
+  z-index: 1;
+  color: #012340;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 36, ../sass/_base.scss */
+#scroll-down-notice:after {
+  content: "";
+  position: absolute;
+  top: 2em;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -1em;
+  border: 1em solid transparent;
+  border-top: 1em solid #012340;
+}
+
 /* line 3, ../sass/layout/_home.scss */
 #nickname {
   position: absolute;
@@ -351,21 +375,30 @@ p {
 /* line 32, ../sass/layout/_home.scss */
 #logo-full {
   position: absolute;
-  top: 0;
+  top: -50%;
   bottom: 0;
-  left: 0;
+  left: -50%;
   right: 0;
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/logo-full.png?1401764872');
+  background-image: url('/images/logo-full.png?1401875139');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 1751px;
   height: 762px;
-  background-image: none, url('/images/logo-full.svg?1401764853');
-  width: 100%;
-  height: 100%;
+  background-image: none, url('/images/logo-full.svg?1401875139');
+  width: 200%;
+  height: 200%;
+}
+@media (min-width: 48em) {
+  /* line 32, ../sass/layout/_home.scss */
+  #logo-full {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* line 3, ../sass/layout/_about.scss */
@@ -390,11 +423,21 @@ p {
 /* line 14, ../sass/layout/_about.scss */
 #about-me .description {
   margin-right: -100%;
-  margin-left: 25.42373%;
-  width: 49.15254%;
+  margin-left: 8.47458%;
+  width: 83.05085%;
   float: left;
   margin-right: 1.69492%;
   display: inline;
+}
+@media (min-width: 48em) {
+  /* line 14, ../sass/layout/_about.scss */
+  #about-me .description {
+    margin-right: -100%;
+    margin-left: 25.42373%;
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
 }
 
 /* line 3, ../sass/layout/_skills.scss */
@@ -413,29 +456,44 @@ p {
 }
 /* line 8, ../sass/layout/_skills.scss */
 #skills .left {
-  width: 49.15254%;
+  width: 100%;
   float: left;
   margin-right: 1.69492%;
   display: inline;
 }
-/* line 9, ../sass/layout/_skills.scss */
+@media (min-width: 64em) {
+  /* line 8, ../sass/layout/_skills.scss */
+  #skills .left {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+/* line 15, ../sass/layout/_skills.scss */
 #skills .right {
-  width: 49.15254%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -1em;
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
   display: inline;
 }
-/* line 11, ../sass/layout/_skills.scss */
+@media (min-width: 64em) {
+  /* line 15, ../sass/layout/_skills.scss */
+  #skills .right {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 23, ../sass/layout/_skills.scss */
 #skills ul {
   padding-left: 0;
 }
-/* line 13, ../sass/layout/_skills.scss */
+/* line 25, ../sass/layout/_skills.scss */
 #skills li {
   list-style: none;
   position: relative;
 }
-/* line 18, ../sass/layout/_skills.scss */
+/* line 30, ../sass/layout/_skills.scss */
 #skills .score {
   width: 30%;
   height: 1em;
@@ -443,7 +501,7 @@ p {
   float: right;
   background: white;
 }
-/* line 28, ../sass/layout/_skills.scss */
+/* line 40, ../sass/layout/_skills.scss */
 #skills .score:after {
   position: absolute;
   content: " ";
@@ -455,23 +513,34 @@ p {
   -o-transition: 1s ease;
   transition: 1s ease;
 }
-/* line 42, ../sass/layout/_skills.scss */
+/* line 53, ../sass/layout/_skills.scss */
+#skills .rank {
+  position: absolute;
+  z-index: 1;
+  padding-left: 0.5em;
+  font-size: 0.75em;
+  line-height: 1.5em;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Open Sans", snas-serif;
+}
+/* line 67, ../sass/layout/_skills.scss */
 #skills .score-1:after {
   width: 6%;
 }
-/* line 42, ../sass/layout/_skills.scss */
+/* line 67, ../sass/layout/_skills.scss */
 #skills .score-2:after {
   width: 12%;
 }
-/* line 42, ../sass/layout/_skills.scss */
+/* line 67, ../sass/layout/_skills.scss */
 #skills .score-3:after {
   width: 18%;
 }
-/* line 42, ../sass/layout/_skills.scss */
+/* line 67, ../sass/layout/_skills.scss */
 #skills .score-4:after {
   width: 24%;
 }
-/* line 42, ../sass/layout/_skills.scss */
+/* line 67, ../sass/layout/_skills.scss */
 #skills .score-5:after {
   width: 30%;
 }
@@ -490,28 +559,47 @@ p {
 }
 /* line 10, ../sass/layout/_works.scss */
 #works .item {
-  width: 32.20339%;
+  width: 49.15254%;
   float: left;
   margin-right: 1.69492%;
   display: inline;
   margin-right: -100%;
 }
 /* line 42, ../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.9/sass/susy/_isolation.scss */
-#works .item:nth-child(3n + 1) {
+#works .item:nth-child(2n + 1) {
   margin-left: 0%;
   clear: left;
 }
 /* line 42, ../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.9/sass/susy/_isolation.scss */
-#works .item:nth-child(3n + 2) {
-  margin-left: 33.89831%;
+#works .item:nth-child(2n + 2) {
+  margin-left: 50.84746%;
   clear: none;
 }
-/* line 42, ../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.9/sass/susy/_isolation.scss */
-#works .item:nth-child(3n + 3) {
-  margin-left: 67.79661%;
-  clear: none;
+@media (min-width: 48em) {
+  /* line 10, ../sass/layout/_works.scss */
+  #works .item {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-right: -100%;
+  }
+  /* line 42, ../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.9/sass/susy/_isolation.scss */
+  #works .item:nth-child(3n + 1) {
+    margin-left: 0%;
+    clear: left;
+  }
+  /* line 42, ../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.9/sass/susy/_isolation.scss */
+  #works .item:nth-child(3n + 2) {
+    margin-left: 33.89831%;
+    clear: none;
+  }
+  /* line 42, ../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.9/sass/susy/_isolation.scss */
+  #works .item:nth-child(3n + 3) {
+    margin-left: 67.79661%;
+    clear: none;
+  }
 }
-/* line 14, ../sass/layout/_works.scss */
+/* line 18, ../sass/layout/_works.scss */
 #works .wrapper {
   display: block;
   position: relative;
@@ -524,16 +612,16 @@ p {
   padding-top: 56.25%;
   overflow: hidden;
 }
-/* line 25, ../sass/layout/_works.scss */
-#works .wrapper:hover .cover {
+/* line 29, ../sass/layout/_works.scss */
+#works .wrapper:hover .cover, #works .wrapper:focus .cover {
   top: 0;
 }
-/* line 28, ../sass/layout/_works.scss */
+/* line 32, ../sass/layout/_works.scss */
 #works .thumbnail {
   position: absolute;
   top: 0;
 }
-/* line 33, ../sass/layout/_works.scss */
+/* line 37, ../sass/layout/_works.scss */
 #works .cover {
   position: absolute;
   top: 100%;
@@ -555,7 +643,7 @@ p {
   -o-transition: 300ms ease;
   transition: 300ms ease;
 }
-/* line 53, ../sass/layout/_works.scss */
+/* line 57, ../sass/layout/_works.scss */
 #works .time {
   display: inline-block;
   padding: 0.5em;
@@ -609,6 +697,38 @@ p {
   display: table;
   clear: both;
 }
+@media (min-width: 48em) {
+  /* line 3, ../sass/modules/_grid.scss */
+  .container {
+    max-width: 59em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 38, ../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@media (min-width: 64em) {
+  /* line 3, ../sass/modules/_grid.scss */
+  .container {
+    max-width: 59em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 38, ../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 
 /* line 3, ../sass/modules/_section.scss */
 .section {
@@ -628,20 +748,22 @@ p {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 10, ../sass/modules/_timeline.scss */
-.timeline:before {
-  display: block;
-  content: " ";
-  position: absolute;
-  top: -1em;
-  left: 50%;
-  width: 6px;
-  height: 100%;
-  margin-left: -3px;
-  background: #d97979;
+@media (min-width: 48em) {
+  /* line 11, ../sass/modules/_timeline.scss */
+  .timeline:before {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: -1em;
+    left: 50%;
+    width: 6px;
+    height: 100%;
+    margin-left: -3px;
+    background: #d97979;
+  }
 }
 
-/* line 27, ../sass/modules/_timeline.scss */
+/* line 29, ../sass/modules/_timeline.scss */
 .timeline li {
   list-style: none;
   margin-top: 0em;
@@ -651,68 +773,77 @@ p {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 32, ../sass/modules/_timeline.scss */
-.timeline li .right {
-  position: relative;
-  width: 49.15254%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -1em;
-  display: inline;
-  float: right;
-}
-/* line 37, ../sass/modules/_timeline.scss */
-.timeline li .right .flag, .timeline li .right .detail {
-  padding-left: 1em;
-}
-/* line 38, ../sass/modules/_timeline.scss */
-.timeline li .right .flag:before {
-  right: 100%;
-  margin-right: -1px;
-}
-/* line 41, ../sass/modules/_timeline.scss */
-.timeline li .left {
-  position: relative;
-  width: 49.15254%;
+/* line 34, ../sass/modules/_timeline.scss */
+.timeline li .right, .timeline li .left {
+  margin-left: 8.47458%;
+  width: 83.05085%;
   float: left;
   margin-right: 1.69492%;
   display: inline;
-  float: left;
-  text-align: right;
 }
-/* line 47, ../sass/modules/_timeline.scss */
-.timeline li .left .flag, .timeline li .left .detail {
-  padding-right: 1em;
+@media (min-width: 48em) {
+  /* line 40, ../sass/modules/_timeline.scss */
+  .timeline li .left, .timeline li .right {
+    margin-left: 0%;
+  }
+  /* line 44, ../sass/modules/_timeline.scss */
+  .timeline li .right {
+    position: relative;
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 48, ../sass/modules/_timeline.scss */
+  .timeline li .right .flag, .timeline li .right .detail {
+    padding-left: 1em;
+  }
+  /* line 49, ../sass/modules/_timeline.scss */
+  .timeline li .right .flag:before {
+    right: 100%;
+    margin-right: -1px;
+  }
+  /* line 52, ../sass/modules/_timeline.scss */
+  .timeline li .left {
+    position: relative;
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    text-align: right;
+  }
+  /* line 57, ../sass/modules/_timeline.scss */
+  .timeline li .left .flag, .timeline li .left .detail {
+    padding-right: 1em;
+  }
+  /* line 58, ../sass/modules/_timeline.scss */
+  .timeline li .left .flag:before {
+    left: 100%;
+    margin-left: -1px;
+  }
+  /* line 62, ../sass/modules/_timeline.scss */
+  .timeline li .flag:before {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 0.5em;
+    height: 0.5em;
+    width: 0.5em;
+    border: 5px solid #d97979;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background: white;
+  }
 }
-/* line 48, ../sass/modules/_timeline.scss */
-.timeline li .left .flag:before {
-  left: 100%;
-  margin-left: -1px;
-}
-/* line 52, ../sass/modules/_timeline.scss */
-.timeline li .flag:before {
-  display: block;
-  content: " ";
-  position: absolute;
-  top: 0.5em;
-  height: 0.5em;
-  width: 0.5em;
-  border: 5px solid #d97979;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  background: white;
-}
-/* line 69, ../sass/modules/_timeline.scss */
+/* line 80, ../sass/modules/_timeline.scss */
 .timeline li .item {
   margin-top: 0.375em;
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 0.375em;
 }
-/* line 73, ../sass/modules/_timeline.scss */
+/* line 84, ../sass/modules/_timeline.scss */
 .timeline li h4 {
   font-weight: normal;
   margin-top: 0em;
@@ -783,4 +914,9 @@ p {
   -moz-transition: 500ms;
   -o-transition: 500ms;
   transition: 500ms;
+}
+
+/* line 11, ../sass/_states.scss */
+.hidden {
+  display: none;
 }
