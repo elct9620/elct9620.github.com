@@ -37,6 +37,8 @@
 
         = content_for?(:page_content) ? yield(:page_content) : yield
 
+        #scroll-down-notice Scroll Down
+
         = render "partials/analytics.html.erb" if enable_analytics?
         = render "partials/justfont.html.erb"
         = render "partials/scripts"
