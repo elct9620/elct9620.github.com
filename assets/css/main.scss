@@ -18,4 +18,18 @@ $tamago: rgba(249, 191, 69, 1);
 
 body {
   background: $kon;
+  font-size: 14px;
+}
+
+/**
+ * Header
+ */
+
+#header {
+  margin-top: 4rem;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
 }

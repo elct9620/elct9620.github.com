@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-
     {{ $sass := resources.Get "css/main.scss" }}
     {{
       $sassOptions := (dict
@@ -19,6 +18,9 @@
     <link rel="stylesheet" href="{{ $style.Permalink }}">
   </head>
   <body>
+    <header id="header">
+      <img id="logo" src="{{ (resources.Get "images/logo.svg" | fingerprint).Permalink }}" />
+    </header>
     {{ block "main" . }}
     {{ end }}
   </body>
