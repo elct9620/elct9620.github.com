@@ -18,7 +18,15 @@ $tamago: rgba(249, 191, 69, 1);
 
 body {
   background: $kon;
-  font-size: 14px;
+  color: $white;
+
+  padding: 0 1rem;
+
+  font-size: 16px;
+  font-family: "creamfont", serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /**
@@ -26,10 +34,71 @@ body {
  */
 
 #header {
-  margin-top: 4rem;
+  margin-top: 3.5rem;
 }
 
 #logo {
   display: block;
   margin: 0 auto;
+}
+
+/**
+ * Main
+ */
+
+#main {
+  overflow: hidden;
+}
+
+/**
+ * Profile
+ */
+
+.profile {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  transform: translateX(-50%);
+
+  &__name, &__title {
+    font-weight: normal;
+  }
+
+  &__name {
+    display: inline-block;
+
+    margin: -3rem 0 0 16rem;
+    padding: 0.75rem 2.875rem;
+
+    background: $gunJyo;
+    font-size: 4rem;
+
+    box-shadow: 0.25rem 0.25rem 0 $tamago;
+  }
+
+  &__title {
+    margin-left: 16rem;
+
+    font-size: 1.5rem;
+  }
+
+  &__avatar {
+    float: left;
+  }
+
+  &__group {
+    clear: both;
+    zoom: 1;
+  }
+
+  &__introduce {
+    max-width: 16rem;
+    float: left;
+
+    margin-top: 14rem;
+    margin-left: 2rem;
+  }
 }

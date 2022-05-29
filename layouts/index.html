@@ -1,2 +1,18 @@
 {{ define "main" }}
+  <section id="profile" class="profile">
+    <div class="profile__group">
+      <div class="profile__avatar">
+        <img srcset="{{ (resources.Get "images/avatar@2x.jpg" | fingerprint).Permalink }} 2x" src="{{ (resources.Get "images/avatar.jpg" | fingerprint).Permalink }}"/>
+      </div>
+      <p class="profile__introduce">
+        我是軟體開發的求道者蒼時弦也，主要使用猶如賢者之石一般的 Ruby 語言，期望能夠在軟體開發這條路上找出一個能讓每個人都享受撰寫程式樂趣的方法，並且讓世界上能有更多優秀的程式被設計出來。
+      </p>
+    </div>
+    <div class="profile__group">
+      <h1 class="profile__name">蒼時弦也</h1>
+      <h2 class="profile__title">技術顧問×社群講師</h1>
+      <div class="profile__links">
+      </div>
+    </div>
+  </section>
 {{ end }}
