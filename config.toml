@@ -1,0 +1,5 @@
+baseURL = 'https://aotoki.me/'
+languageCode = 'zh-TW'
+title = '蒼時弦也'
+
+disableKinds = ["taxonomy", "term"]
