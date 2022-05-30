@@ -32,14 +32,14 @@ body {
 }
 
 .jf-loading {
-  main {
+  .swap-font {
     opacity: 0;
   }
 }
 
 .jf-active {
-  main {
-    transition-delay: 1s;
+  .swap-font {
+    transition-delay: .5s;
     transition: 1s;
     opacity: 1;
   }
