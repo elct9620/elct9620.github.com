@@ -46,14 +46,12 @@ body {
 #logo {
   display: block;
   margin: 0 auto;
-}
 
-/**
- * Main
- */
+  max-width: 50%;
 
-#main {
-  overflow: hidden;
+  @include breakpoint-up(sm) {
+    max-width: 100%;
+  }
 }
 
 /**
@@ -63,11 +61,18 @@ body {
 .profile {
   display: inline-block;
   position: relative;
-  left: 50%;
 
-  margin-top: 6rem;
-  margin-bottom: 6rem;
-  transform: translateX(-50%);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  @include breakpoint-up(md) {
+    left: 50%;
+
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+
+    transform: translateX(-50%);
+  }
 
   &__name, &__title {
     font-weight: normal;
@@ -76,28 +81,36 @@ body {
   &__name {
     display: inline-block;
 
-    margin: 0;
+    margin-top: 1.5rem 0 0;
     padding: 0.75rem 2.875rem;
 
     background: $gunJyo;
-    font-size: 4rem;
+    font-size: 2rem;
 
     box-shadow: 0.25rem 0.25rem 0 $tamago;
 
     @include breakpoint-up(md) {
       margin: -3rem 0 0 16rem;
+
+      font-size: 4rem;
     }
   }
 
   &__title {
     font-size: 1.5rem;
+    margin: 0;
 
     @include breakpoint-up(md) {
+      margin: 1rem;
       margin-left: 16rem;
     }
   }
 
   &__avatar {
+    img {
+      max-width: 100%;
+    }
+
     @include breakpoint-up(md) {
       float: left;
     }
