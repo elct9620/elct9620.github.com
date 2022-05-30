@@ -39,8 +39,7 @@ body {
 
 .jf-active {
   .swap-font {
-    transition-delay: .5s;
-    transition: 1s;
+    transition-duration: 1s;
     opacity: 1;
   }
 }
@@ -113,6 +112,8 @@ body {
     font-size: 1.5rem;
     margin: 0;
 
+    transition-delay: .5s;
+
     @include breakpoint-up(md) {
       margin: 1rem 0 0;
       margin-left: 16rem;
@@ -138,6 +139,8 @@ body {
   }
 
   &__introduce {
+    transition-delay: .5s;
+
     @include breakpoint-up(md) {
       max-width: 16rem;
       float: left;
