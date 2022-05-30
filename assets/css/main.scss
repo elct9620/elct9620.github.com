@@ -7,22 +7,17 @@
  * Modules
  */
 
+@import "settings";
 @import "breakpoints";
-
-/**
- * Colors
- */
-
-$white: rgba(255, 255, 255, 1);
-$kon: rgba(15, 37, 64, 1);
-$gunJyo: rgba(81, 168, 221, 1);
-$tamago: rgba(249, 191, 69, 1);
+@import "animations";
 
 /**
  * Base
  */
 
 body {
+  min-height: 100vh;
+
   background: $kon;
   color: $white;
 
@@ -33,6 +28,20 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.jf-loading {
+  main {
+    opacity: 0;
+  }
+}
+
+.jf-active {
+  main {
+    transition-delay: 1s;
+    transition: 1s;
+    opacity: 1;
+  }
 }
 
 /**
@@ -87,7 +96,10 @@ body {
     background: $gunJyo;
     font-size: 2rem;
 
-    box-shadow: 0.25rem 0.25rem 0 $tamago;
+    animation-name: name-shadow;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 
     @include breakpoint-up(md) {
       margin: -3rem 0 0 16rem;

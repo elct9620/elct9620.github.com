@@ -1,0 +1,13 @@
+/**
+ * Create Shadow
+ */
+
+@keyframes name-shadow {
+  from {
+    box-shadow: 0rem 0rem 0 $tamago;
+  }
+
+  to {
+    box-shadow: 0.25rem 0.25rem 0 $tamago;
+  }
+}

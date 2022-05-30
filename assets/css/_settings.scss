@@ -1,0 +1,18 @@
+/**
+ * Colors
+ */
+
+$white: rgba(255, 255, 255, 1);
+$kon: rgba(15, 37, 64, 1);
+$gunJyo: rgba(81, 168, 221, 1);
+$tamago: rgba(249, 191, 69, 1);
+
+/**
+ * Breakpoints
+ */
+
+$breakpoints: (
+  'sm':  576px,
+  'md':  768px,
+  'lg':  992px
+) !default;
