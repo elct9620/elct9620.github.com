@@ -3,10 +3,10 @@
     <div class="profile__group">
       <div class="profile__avatar">
         {{ $avatar := resources.Get "images/avatar.jpg" }}
-        {{ $avatar := $avatar.Resize "400x400 webp" }}
+        {{ $avatar := $avatar.Resize "400x400 webp photo q100" }}
 
         {{ $avatarRetina := resources.Get "images/avatar@2x.jpg" }}
-        {{ $avatarRetina := $avatar.Resize "800x800 webp" }}
+        {{ $avatarRetina := $avatar.Resize "800x800 webp photo q100" }}
 
         <img srcset="{{ ($avatarRetina | fingerprint).Permalink }} 2x" src="{{ ($avatar | fingerprint ).Permalink }}" alt="{{ .Site.Author.name }}" />
       </div>
