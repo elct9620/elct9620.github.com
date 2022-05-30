@@ -3,10 +3,10 @@
     <div class="profile__group">
       <div class="profile__avatar">
         {{ $avatar := resources.Get "images/avatar.jpg" }}
-        {{ $avatar := $avatar.Resize "400x400 webp photo q100" }}
+        {{ $avatar := $avatar.Resize "400x400 webp picture q90" }}
 
         {{ $avatarRetina := resources.Get "images/avatar@2x.jpg" }}
-        {{ $avatarRetina := $avatar.Resize "800x800 webp photo q100" }}
+        {{ $avatarRetina := $avatar.Resize "800x800 webp picture q90" }}
 
         <img
           rel="preload"
