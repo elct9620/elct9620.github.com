@@ -125,6 +125,8 @@ body {
       max-width: 100%;
       width: auto;
       height: auto;
+
+      background: $white;
     }
 
     @include breakpoint-up(md) {
