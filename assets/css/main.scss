@@ -113,6 +113,9 @@ body {
 
     @include breakpoint-up(md) {
       float: left;
+
+      min-width: 25rem;
+      min-height: 25rem;
     }
   }
 

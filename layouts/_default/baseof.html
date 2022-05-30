@@ -20,7 +20,7 @@
   </head>
   <body>
     <header id="header">
-      <img id="logo" src="{{ (resources.Get "images/logo.svg" | fingerprint).Permalink }}" />
+      <img id="logo" src="{{ (resources.Get "images/logo.svg" | fingerprint).Permalink }}" alt="{{ .Site.Title }}" />
     </header>
     <main id="main">
     {{ block "main" . }}
