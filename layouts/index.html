@@ -8,7 +8,13 @@
         {{ $avatarRetina := resources.Get "images/avatar@2x.jpg" }}
         {{ $avatarRetina := $avatar.Resize "800x800 webp photo q100" }}
 
-        <img srcset="{{ ($avatarRetina | fingerprint).Permalink }} 2x" src="{{ ($avatar | fingerprint ).Permalink }}" alt="{{ .Site.Author.name }}" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}" />
+        <img
+          rel="preload"
+          srcset="{{ ($avatarRetina | fingerprint).Permalink }} 2x"
+          src="{{ ($avatar | fingerprint ).Permalink }}"
+          alt="{{ .Site.Author.name }}"
+          width="{{ $avatar.Width }}"
+          height="{{ $avatar.Height }}" />
       </div>
       <p class="profile__introduce swap-font">
         我是軟體開發的求道者蒼時弦也，主要使用猶如賢者之石一般的 Ruby 語言，期望能夠在軟體開發這條路上找出一個能讓每個人都享受撰寫程式樂趣的方法，並且讓世界上能有更多優秀的程式被設計出來。
