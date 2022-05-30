@@ -8,16 +8,28 @@
         {{ $avatarRetina := resources.Get "images/avatar@2x.jpg" }}
         {{ $avatarRetina := $avatar.Resize "800x800 webp" }}
 
-        <img srcset="{{ ($avatarRetina | fingerprint).Permalink }} 2x" src="{{ ($avatar | fingerprint ).Permalink }}" alt="{{ .Site.Author.Name }}" />
+        <img srcset="{{ ($avatarRetina | fingerprint).Permalink }} 2x" src="{{ ($avatar | fingerprint ).Permalink }}" alt="{{ .Site.Author.name }}" />
       </div>
       <p class="profile__introduce">
         我是軟體開發的求道者蒼時弦也，主要使用猶如賢者之石一般的 Ruby 語言，期望能夠在軟體開發這條路上找出一個能讓每個人都享受撰寫程式樂趣的方法，並且讓世界上能有更多優秀的程式被設計出來。
       </p>
     </div>
     <div class="profile__group">
-      <h1 class="profile__name">蒼時弦也</h1>
+      <h1 class="profile__name">{{ .Site.Author.name }}</h1>
       <h2 class="profile__title">技術顧問×社群講師</h1>
       <div class="profile__links">
+        <a href="https://facebook.com/aotoki.me" target="_blank" class="profile__link-item">
+          <img src="{{ (resources.Get "images/facebook.svg" | fingerprint).Permalink }}" alt="Facebook" />
+        </a>
+        <a href="https://twitter.com/elct9620" target="_blank" class="profile__link-item">
+          <img src="{{ (resources.Get "images/twitter.svg" | fingerprint).Permalink }}" alt="Twitter" />
+        </a>
+        <a href="https://blog.aotoki.me" target="_blank" class="profile__link-item">
+          <img src="{{ (resources.Get "images/blog.svg" | fingerprint).Permalink }}" alt="弦而時習之" />
+        </a>
+        <a href="https://discord.com/invite/t2Kd6PNvvA" target="_blank" class="profile__link-item">
+          <img src="{{ (resources.Get "images/discord.svg" | fingerprint).Permalink }}" alt="星門計畫" />
+        </a>
       </div>
     </div>
   </section>

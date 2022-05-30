@@ -101,7 +101,7 @@ body {
     margin: 0;
 
     @include breakpoint-up(md) {
-      margin: 1rem;
+      margin: 1rem 0 0;
       margin-left: 16rem;
     }
   }
@@ -131,6 +131,25 @@ body {
 
       margin-top: 14rem;
       margin-left: 2rem;
+    }
+  }
+
+  &__links {
+    margin-top: .5rem;
+
+    @include breakpoint-up(md) {
+      margin-left: 16rem;
+    }
+  }
+
+  &__link-item {
+    margin-right: .5rem;
+    vertical-align: middle;
+
+    text-decoration: none;
+
+    &:hover {
+      color: $tamago;
     }
   }
 }
