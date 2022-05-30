@@ -8,5 +8,5 @@
       )
     )
 }}
-{{ $style := $sass | resources.ToCSS $sassOptions | fingerprint | resources.PostCSS }}
+{{ $style := $sass | resources.ToCSS $sassOptions | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
