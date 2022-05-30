@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode }}" class="jf-loading">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -8,8 +8,10 @@
 
     <link rel="shortcut icon" href="{{ (resources.Get "images/favicon.png" | fingerprint).Permalink }}" type="image/png">
     <meta name="theme-color" content="#0F2540">
+    {{ with resources.Get "css/theme.scss" | toCSS | minify }}
+    <style>{{ .Content | safeCSS }}</style>
+    {{ end }}
 
-    {{ partial "head/style" . }}
     {{ partial "head/open-graph" . }}
     {{ partial "head/json-ld" . }}
 
@@ -29,6 +31,8 @@
     {{ block "main" . }}
     {{ end }}
     </main>
+
+    {{ partial "head/style" . }}
     {{ partial "shared/justfont" }}
     <!-- google tag manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=gtm-w42zn6k"

@@ -1,0 +1,40 @@
+/**
+ * Modules
+ */
+
+@import "settings";
+
+/**
+ * Base
+ */
+
+body {
+  min-height: 100vh;
+
+  background: $kon;
+  color: $white;
+
+  padding: 0 1rem;
+
+  font-size: 16px;
+  font-family: "creamfont", serif;
+  font-display: swap;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.jf-loading {
+  .swap-font {
+    opacity: 0;
+  }
+}
+
+.jf-active {
+  .swap-font {
+    transition-duration: 1s;
+    opacity: 1;
+  }
+}
+
+
