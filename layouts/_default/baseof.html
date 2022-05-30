@@ -12,6 +12,7 @@
     <style>{{ .Content | safeCSS }}</style>
     {{ end }}
 
+    {{ partial "head/style" . }}
     {{ partial "head/open-graph" . }}
     {{ partial "head/json-ld" . }}
 
@@ -32,7 +33,6 @@
     {{ end }}
     </main>
 
-    {{ partial "head/style" . }}
     {{ partial "shared/justfont" }}
     <!-- google tag manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=gtm-w42zn6k"
