@@ -1,0 +1,12 @@
+{{ $sass := resources.Get "css/main.scss" }}
+{{
+  $sassOptions := (dict
+    "outputStyle" "compressed"
+    "enableSourceMap" true
+    "includePaths" (slice
+      "node_modules/normalize.css"
+      )
+    )
+}}
+{{ $style := $sass | resources.ToCSS $sassOptions | fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">

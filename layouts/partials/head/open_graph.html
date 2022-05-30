@@ -1,0 +1,4 @@
+<meta property="og:title" content="{{ .Site.Title }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:description" content="{{ .Site.Params.description }}" />
+<meta property="og:image" content="{{ (resources.Get "images/og.jpg" | fingerprint).Permalink }}" />
