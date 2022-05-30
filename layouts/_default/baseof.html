@@ -6,9 +6,7 @@
     <meta name="description" content="{{ .Site.Params.description }}">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
+    <link rel="shortcut icon" href="{{ (resources.Get "images/favicon.png" | fingerprint).Permalink }}" type="image/png">
     <meta name="theme-color" content="#0F2540">
 
     {{ partial "head/style" . }}
