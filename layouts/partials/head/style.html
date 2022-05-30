@@ -8,10 +8,5 @@
       )
     )
 }}
-{{
-  $postCSSOptions := (dict
-    "noMap" hugo.IsProduction
-  )
-}}
-{{ $style := $sass | resources.ToCSS $sassOptions | fingerprint | resources.PostCSS $postCSSOptions }}
+{{ $style := $sass | resources.ToCSS $sassOptions | fingerprint | resources.PostCSS }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
