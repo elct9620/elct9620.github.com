@@ -2,7 +2,7 @@
 {{
   $sassOptions := (dict
     "outputStyle" "compressed"
-    "enableSourceMap" true
+    "enableSourceMap" (not hugo.IsProduction)
     "includePaths" (slice
       "node_modules/normalize.css"
       )
