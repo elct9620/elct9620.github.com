@@ -123,6 +123,8 @@ body {
   &__avatar {
     img {
       max-width: 100%;
+      width: auto;
+      height: auto;
     }
 
     @include breakpoint-up(md) {
