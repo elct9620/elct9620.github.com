@@ -4,6 +4,12 @@
 @import "normalize";
 
 /**
+ * Modules
+ */
+
+@import "breakpoints";
+
+/**
  * Colors
  */
 
@@ -70,23 +76,31 @@ body {
   &__name {
     display: inline-block;
 
-    margin: -3rem 0 0 16rem;
+    margin: 0;
     padding: 0.75rem 2.875rem;
 
     background: $gunJyo;
     font-size: 4rem;
 
     box-shadow: 0.25rem 0.25rem 0 $tamago;
+
+    @include breakpoint-up(md) {
+      margin: -3rem 0 0 16rem;
+    }
   }
 
   &__title {
-    margin-left: 16rem;
-
     font-size: 1.5rem;
+
+    @include breakpoint-up(md) {
+      margin-left: 16rem;
+    }
   }
 
   &__avatar {
-    float: left;
+    @include breakpoint-up(md) {
+      float: left;
+    }
   }
 
   &__group {
@@ -95,10 +109,12 @@ body {
   }
 
   &__introduce {
-    max-width: 16rem;
-    float: left;
+    @include breakpoint-up(md) {
+      max-width: 16rem;
+      float: left;
 
-    margin-top: 14rem;
-    margin-left: 2rem;
+      margin-top: 14rem;
+      margin-left: 2rem;
+    }
   }
 }

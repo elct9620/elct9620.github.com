@@ -1,0 +1,26 @@
+/**
+ * Breakpoints
+ */
+
+$breakpoints: (
+  'sm':  576px,
+  'md':  768px,
+  'lg':  992px
+) !default;
+
+/**
+ * Mixin
+ */
+
+@mixin breakpoint-up($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unsupport breakpoint `#{$size}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
