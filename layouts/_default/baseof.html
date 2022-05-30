@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{ .Site.Params.description }}">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta name="theme-color" content="#0F2540">
+
     {{ partial "head/style" . }}
     {{ partial "head/open_graph" . }}
 
