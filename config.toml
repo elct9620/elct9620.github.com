@@ -1,5 +1,6 @@
 baseURL = 'https://aotoki.me/'
 languageCode = 'zh-TW'
+DefaultContentLanguage = "zh-tw"
 title = '蒼時弦也'
 
 disableKinds = ["taxonomy", "term"]
