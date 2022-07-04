@@ -5,6 +5,9 @@ title = '蒼時弦也'
 
 disableKinds = ["taxonomy", "term"]
 
+[build]
+  writeStats = true
+
 [author]
   name = '蒼時弦也'
 
