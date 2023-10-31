@@ -10,6 +10,6 @@
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "normalize.css": "^8.0.1",
     "postcss": "^8.4.31",
-    "postcss-cli": "^9.1.0"
+    "postcss-cli": "^10.1.0"
   }
 }
