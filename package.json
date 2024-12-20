@@ -6,6 +6,7 @@
   "author": "蒼時弦也 <contact@aotoki.me>",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^7.0.2",
     "normalize.css": "^8.0.1",

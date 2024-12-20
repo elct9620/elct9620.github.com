@@ -5,9 +5,7 @@ title = '蒼時弦也'
 
 disableKinds = ["taxonomy", "term"]
 
-[author]
-  name = '蒼時弦也'
-
 [params]
+  author = '蒼時弦也'
   description = '我是軟體開發的求道者蒼時弦也，主要使用猶如賢者之石一般的 Ruby 語言，期望能夠在軟體開發這條路上找出一個能讓每個人都享受撰寫程式樂趣的方法，並且讓世界上能有更多優秀的程式被設計出來。'
   facebookAppID = '178355449110'

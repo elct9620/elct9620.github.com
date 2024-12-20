@@ -1,11 +1,11 @@
-const purgecss = require('@fullhuman/postcss-purgecss')
+import { purgeCSSPlugin } from '@fullhuman/postcss-purgecss'
 
-module.exports = {
+export default {
      plugins: [
          ...(
            process.env.HUGO_ENVIRONMENT === 'production' ?
            [
-             purgecss({
+             purgeCSSPlugin({
                content: ['./**/*.html']
              })
            ] : []
