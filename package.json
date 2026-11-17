@@ -10,7 +10,7 @@
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^9.1.0",
     "normalize.css": "^8.0.1",
-    "postcss": "^8.5.26",
+    "postcss": "^8.5.33",
     "postcss-cli": "^11.0.1"
   }
 }
